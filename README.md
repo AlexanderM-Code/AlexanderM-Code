@@ -93,7 +93,9 @@ class Alexander extends Developer {
 | **Frontend** | <img src="https://skillicons.dev/icons?i=html,css,bootstrap,js,react" /> |
 | **Bases de datos** | <img src="https://skillicons.dev/icons?i=mysql,sqlite,firebase" /> |
 | **Análisis de datos** | <img src="https://skillicons.dev/icons?i=python" /> <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" height="48" /> <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" height="48" /> <img src="https://img.shields.io/badge/Google_Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white" height="48" /> |
-| **Herramientas** | <img src="https://skillicons.dev/icons?i=git,github,docker,gcp,vscode,idea" /> |
+| **Herramientas** | <img src="https://skillicons.dev/icons?i=git,github,docker,postman,gcp,vscode,idea" /> |
+
+**Herramientas:** Git · GitHub · Docker · Postman · Google Cloud · VS Code · IntelliJ IDEA
 
 **Metodologías:** Scrum · Arquitectura MVVM · Pruebas de software (líder de pruebas en proyecto académico)
 
