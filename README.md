@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/AlexanderM-Code">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3000&pause=800&color=4FC3F7&center=true&vCenter=true&width=620&lines=Desarrollador+Flutter+%2F+Dart;Backend+con+Java+y+Spring+Boot;Desarrollo+web+con+JavaScript+y+React;An%C3%A1lisis+de+datos+con+Python;Buscando+pr%C3%A1ctica+empresarial" alt="Roles" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3000&pause=800&color=4FC3F7&center=true&vCenter=true&width=620&lines=Desarrollador+Flutter+%2F+Dart;Backend+con+Java+y+Spring+Boot;Desarrollo+web+con+JavaScript+y+React;An%C3%A1lisis+de+datos+con+SQL%2C+Power+BI+y+Python;Buscando+pr%C3%A1ctica+empresarial" alt="Roles" />
   </a>
 </p>
 
@@ -29,7 +29,7 @@ class Alexander extends Developer {
     'Apps móviles con Flutter',
     'APIs con Java y Spring Boot',
     'Desarrollo web con HTML, CSS, JavaScript y React',
-    'Análisis de datos con Python',
+    'Análisis de datos con SQL, Power BI y Python',
     'IA que funciona sin internet',
   ];
 
@@ -92,7 +92,7 @@ class Alexander extends Developer {
 | **Backend** | <img src="https://skillicons.dev/icons?i=java,spring,python,fastapi" /> |
 | **Frontend** | <img src="https://skillicons.dev/icons?i=html,css,bootstrap,js,react" /> |
 | **Bases de datos** | <img src="https://skillicons.dev/icons?i=mysql,sqlite,firebase" /> |
-| **Análisis de datos** | <img src="https://skillicons.dev/icons?i=python" /> <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" height="48" /> <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" height="48" /> <img src="https://img.shields.io/badge/Google_Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white" height="48" /> |
+| **Análisis de datos** | <img src="https://skillicons.dev/icons?i=python" /> <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" height="48" /> <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" height="48" /> <img src="https://img.shields.io/badge/Looker_Studio-4285F4?style=for-the-badge&logo=looker&logoColor=white" height="48" /> <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" height="48" /> <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" height="48" /> <img src="https://img.shields.io/badge/Google_Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white" height="48" /> |
 | **Herramientas** | <img src="https://skillicons.dev/icons?i=git,github,docker,postman,gcp,vscode,idea" /> |
 
 **Herramientas:** Git · GitHub · Docker · Postman · Google Cloud · VS Code · IntelliJ IDEA
@@ -105,7 +105,7 @@ class Alexander extends Developer {
 
 - Cursando el **Diplomado en Programación en Java** — Politécnico de Colombia
 - Profundizando en **React** y JavaScript moderno
-- Aplicando **análisis de datos** con Python: regresión lineal, regresión logística y ANOVA
+- Aplicando **análisis de datos** con SQL, Power BI, Looker Studio y Python: regresión lineal, regresión logística y ANOVA
 - Practicando con laboratorios de **Google Cloud** (Compute Engine, Cloud Functions, IAM)
 - Buscando mi **práctica empresarial**
 
