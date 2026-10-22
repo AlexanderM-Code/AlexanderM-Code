@@ -1,82 +1,82 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Alexander%20Mej%C3%ADa%20Ospina&fontSize=42&fontColor=ffffff&fontAlignY=38&desc=Ingeniero%20de%20Software%20en%20formaci%C3%B3n%20%C2%B7%20Medell%C3%ADn&descAlignY=58&descSize=16" alt="Alexander Mejía Ospina" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Alexander%20Mej%C3%ADa%20Ospina&fontSize=42&fontColor=ffffff&fontAlignY=38&desc=Desarrollador%20full%20stack%20en%20formaci%C3%B3n%20%C2%B7%20Medell%C3%ADn&descAlignY=58&descSize=16" alt="Alexander Mejía Ospina" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/AlexanderM-Code">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3000&pause=800&color=4FC3F7&center=true&vCenter=true&width=620&lines=Desarrollador+Flutter+%2F+Dart;Backend+con+Java+y+Spring+Boot;Desarrollo+web+con+JavaScript+y+React;An%C3%A1lisis+de+datos+con+SQL%2C+Power+BI+y+Python;Buscando+pr%C3%A1ctica+empresarial" alt="Roles" />
+  <a href="https://alexanderm-code.github.io/">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3000&pause=800&color=4FC3F7&center=true&vCenter=true&width=640&lines=Desarrollo+full+stack%3A+APIs%2C+web+y+apps;APIs+con+Java+y+Spring+Boot;Frontend+con+React;Apps+m%C3%B3viles+con+Flutter;An%C3%A1lisis+de+datos+con+SQL+y+Power+BI;Disponible+para+pr%C3%A1ctica+empresarial" alt="Desarrollo full stack: APIs, web y apps" />
   </a>
 </p>
 
 <p align="center">
+  <a href="https://alexanderm-code.github.io/"><img src="https://img.shields.io/badge/Portafolio-alexanderm--code.github.io-4FC3F7?style=for-the-badge&logo=githubpages&logoColor=0f2027&labelColor=0f2027" /></a>
   <img src="https://img.shields.io/badge/Estado-Disponible%20para%20pr%C3%A1ctica-2ea44f?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Medell%C3%ADn-Colombia-1f6feb?style=for-the-badge" />
   <a href="https://www.linkedin.com/in/alexander-mejia-ospina"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
   <a href="mailto:alexmejia0112@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 </p>
 
----
-
-## Sobre mí
-
-```dart
-class Alexander extends Developer {
-  final String carrera     = 'Ingeniería de Software · VII semestre';
-  final String universidad = 'Universidad Cooperativa de Colombia';
-  final String ciudad      = 'Medellín, Colombia';
-
-  final List<String> foco = [
-    'Apps móviles con Flutter',
-    'APIs con Java y Spring Boot',
-    'Desarrollo web con HTML, CSS, JavaScript y React',
-    'Análisis de datos con SQL, Power BI y Python',
-    'IA que funciona sin internet',
-  ];
-
-  final String buscando = 'Práctica empresarial de tiempo completo';
-  final String ingles   = 'B1';
-
-  @override
-  String get lema => 'Construir software que llegue a quien más lo necesita.';
-}
-```
+<p align="center">
+  Estudiante de Ingeniería de Software en Medellín. Hago backend, frontend, apps móviles y análisis de datos.<br/>
+  <b>Mira capturas y el video de cada proyecto en mi <a href="https://alexanderm-code.github.io/">portafolio</a>.</b>
+</p>
 
 ---
 
-## Proyectos destacados
+## Proyectos
 
 <table>
   <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/geminitodo5-sketch/app-educativa-medellin">Numi</a></h3>
-      <p>App educativa para niños de primaria en zonas rurales de Medellín que <b>funciona sin internet</b>.</p>
+      <p><i>App móvil con backend en FastAPI · Proyecto en equipo, 2026</i></p>
+      <p><b>Software que funciona donde no llega la señal.</b> Muchos niños de primaria en zonas rurales de Medellín tienen poco o ningún acceso a internet.</p>
       <ul>
         <li>15 actividades interactivas en 5 materias del currículo colombiano.</li>
-        <li>Asistente de IA <b>Gemma 2B en el dispositivo</b> con RAG sobre una base de conocimiento local en SQLite.</li>
+        <li>Asistente de IA que corre en el celular: Gemma 2B con RAG sobre una base de conocimiento local en SQLite.</li>
         <li>Progreso sincronizado con un backend en FastAPI y login con Firebase Auth.</li>
       </ul>
       <img src="https://skillicons.dev/icons?i=flutter,dart,sqlite,firebase,fastapi,docker" />
     </td>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/AlexanderM-Code/CineX---Proyecto-Final">CineX</a></h3>
-      <p>Sistema de gestión de cine con <b>backend, base de datos y frontend</b>.</p>
+      <p><i>Proyecto full stack: API, base de datos y frontend · Noviembre de 2025</i></p>
+      <p><b>Una API REST para manejar todo lo que pasa en un cine, de la cartelera a la confitería.</b></p>
       <ul>
-        <li>API REST en Java con Spring Boot.</li>
-        <li>Consumo y manejo de la información de la cartelera: título, duración y descripción.</li>
-        <li>Interfaz para explorar el catálogo de películas.</li>
+        <li>API en Java 21 con Spring Boot 3 y arquitectura en capas.</li>
+        <li>Películas, salas, funciones, reservas, productos y usuarios en MySQL con Spring Data JPA.</li>
+        <li>Panel de administración web que consume la API.</li>
       </ul>
-      <img src="https://skillicons.dev/icons?i=java,spring,mysql,html,css,js" />
+      <img src="https://skillicons.dev/icons?i=java,spring,mysql,maven,js" />
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/AlexanderM-Code/Entre-sorbos---Casa-Rendon">Casa Rendón</a></h3>
-      <p>Sitio web de una marca artesanal de café y vino de Andes, Antioquia. Proyecto en equipo, en producción en <a href="https://casarendon.com">casarendon.com</a>.</p>
-      <img src="https://skillicons.dev/icons?i=html,css,js,react" />
+      <p><i>Frontend en producción · Proyecto en equipo, 2026</i></p>
+      <p><b>El sitio de una familia que hace café y vino artesanal en Andes, Antioquia.</b></p>
+      <ul>
+        <li>Componentes en React para el catálogo, la galería y las preguntas frecuentes.</li>
+        <li>Formulario que envía las reservas de visita por WhatsApp.</li>
+        <li>En producción: <a href="https://casarendon.com">casarendon.com</a></li>
+      </ul>
+      <img src="https://skillicons.dev/icons?i=react,js,html,css" />
     </td>
     <td width="50%" valign="top">
+      <h3><a href="https://alexanderm-code.github.io/#proyectos">Datos con Python</a></h3>
+      <p><i>Curso de Analítica de Datos · Octubre de 2026</i></p>
+      <p><b>Dos modelos, dos preguntas: cuánto rinde un carro y si un tumor es benigno.</b></p>
+      <ul>
+        <li>Regresión lineal y ANOVA para predecir el rendimiento de combustible de 398 vehículos (Auto MPG).</li>
+        <li>Regresión logística para clasificar tumores benignos y malignos.</li>
+        <li>Limpieza, exploración y visualización de datos con Pandas.</li>
+      </ul>
+      <img src="https://skillicons.dev/icons?i=python" /> <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" height="48" /> <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" height="48" />
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top">
       <h3><a href="https://github.com/AlexanderM-Code/sistema-eventos-academicos">Sistema de eventos académicos</a></h3>
-      <p>API para inscribir estudiantes en eventos académicos, aplicando los pilares de la Programación Orientada a Objetos.</p>
+      <p>API en Spring Boot para inscribir estudiantes en eventos académicos, aplicando los pilares de la Programación Orientada a Objetos.</p>
       <img src="https://skillicons.dev/icons?i=java,spring,gradle" />
     </td>
   </tr>
@@ -84,30 +84,45 @@ class Alexander extends Developer {
 
 ---
 
-## Stack
+## Habilidades
 
-| Área | Tecnologías |
-| :-- | :-- |
-| **Móvil** | <img src="https://skillicons.dev/icons?i=flutter,dart" /> |
-| **Backend** | <img src="https://skillicons.dev/icons?i=java,spring,python,fastapi" /> |
-| **Frontend** | <img src="https://skillicons.dev/icons?i=html,css,bootstrap,js,react" /> |
-| **Bases de datos** | <img src="https://skillicons.dev/icons?i=mysql,sqlite,firebase" /> |
-| **Análisis de datos** | <img src="https://skillicons.dev/icons?i=python" /> <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" height="48" /> <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" height="48" /> <img src="https://img.shields.io/badge/Looker_Studio-4285F4?style=for-the-badge&logo=looker&logoColor=white" height="48" /> <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" height="48" /> <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" height="48" /> <img src="https://img.shields.io/badge/Google_Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white" height="48" /> |
-| **Herramientas** | <img src="https://skillicons.dev/icons?i=git,github,docker,postman,gcp,vscode,idea" /> |
+| Área | Tecnologías | Dónde las he usado |
+| :-- | :-- | :-- |
+| **Backend** | <img src="https://skillicons.dev/icons?i=java,spring,python,fastapi" /> | CineX, eventos académicos, Numi |
+| **Frontend** | <img src="https://skillicons.dev/icons?i=html,css,js,react,bootstrap" /> | Casa Rendón, CineX |
+| **Bases de datos** | <img src="https://skillicons.dev/icons?i=mysql,sqlite,firebase" /> | CineX, Numi |
+| **Móvil** | <img src="https://skillicons.dev/icons?i=flutter,dart" /> | Numi: Riverpod, MVVM, SQLite local y Gemma 2B con RAG |
+| **Análisis de datos** | <img src="https://skillicons.dev/icons?i=python" /> <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" height="48" /> <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" height="48" /> <img src="https://img.shields.io/badge/Looker_Studio-4285F4?style=for-the-badge&logo=looker&logoColor=white" height="48" /> <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" height="48" /> <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" height="48" /> | Analítica de Datos: regresión lineal, logística y ANOVA |
+| **Herramientas** | <img src="https://skillicons.dev/icons?i=git,github,docker,postman,gcp,vscode,idea,gradle,maven" /> | Todos los proyectos |
 
-**Herramientas:** Git · GitHub · Docker · Postman · Google Cloud · VS Code · IntelliJ IDEA
-
-**Metodologías:** Scrum · Arquitectura MVVM · Pruebas de software (líder de pruebas en proyecto académico)
+**Metodologías:** Scrum (proyectos en equipo) · Arquitectura MVVM (Numi) · Pruebas de software (líder de pruebas en proyecto académico)
 
 ---
 
-## Actualmente
+## Sobre mí
 
-- Cursando el **Diplomado en Programación en Java** — Politécnico de Colombia
-- Profundizando en **React** y JavaScript moderno
-- Aplicando **análisis de datos** con SQL, Power BI, Looker Studio y Python: regresión lineal, regresión logística y ANOVA
-- Practicando con laboratorios de **Google Cloud** (Compute Engine, Cloud Functions, IAM)
-- Buscando mi **práctica empresarial**
+```dart
+class Alexander extends Developer {
+  final String perfil      = 'Desarrollador full stack en formación';
+  final String carrera     = 'Ingeniería de Software · VII semestre';
+  final String universidad = 'Universidad Cooperativa de Colombia';
+  final String ciudad      = 'Medellín, Colombia';
+
+  final List<String> foco = [
+    'APIs con Java y Spring Boot',
+    'Frontend con React',
+    'Apps móviles con Flutter',
+    'Análisis de datos con SQL, Power BI y Python',
+  ];
+
+  final String enCurso  = 'Diplomado en Programación en Java · Politécnico de Colombia';
+  final String buscando = 'Práctica empresarial: desarrollo de software o análisis de datos';
+  final String ingles   = 'B1';
+
+  @override
+  String get lema => 'Construir software para quienes suelen quedar por fuera de la tecnología.';
+}
+```
 
 ---
 
@@ -123,8 +138,12 @@ class Alexander extends Developer {
 
 ---
 
+## Hablemos
+
+¿Tu equipo busca un practicante de desarrollo o de datos? Escríbeme a **alexmejia0112@gmail.com**.
+
 <p align="center">
-  <b>alexmejia0112@gmail.com</b> · <a href="https://www.linkedin.com/in/alexander-mejia-ospina">LinkedIn</a> · Medellín, Colombia
+  <a href="https://alexanderm-code.github.io/">Portafolio</a> · <a href="https://www.linkedin.com/in/alexander-mejia-ospina">LinkedIn</a> · <a href="https://alexanderm-code.github.io/cv/CV_Alexander_Mejia_Ospina.pdf">Hoja de vida (español)</a> · <a href="https://alexanderm-code.github.io/cv/Resume_Alexander_Mejia_Ospina_EN.pdf">Resume (English)</a>
 </p>
 
 <p align="center">
