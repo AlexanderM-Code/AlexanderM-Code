@@ -661,6 +661,11 @@ def main():
         "contribuciones.svg": contribuciones(),
         "cierre.svg": cierre(),
     }
+    import movil
+    (SALIDA / "movil").mkdir(exist_ok=True)
+    for viejo in (SALIDA / "movil").glob("*.svg"):
+        viejo.unlink()
+    archivos.update(movil.generar())
     for nombre, svg in archivos.items():
         (SALIDA / nombre).write_text(svg, encoding="utf-8")
         print(f"{nombre:28s} {len(svg) / 1024:6.1f} KB")

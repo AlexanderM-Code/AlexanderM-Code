@@ -1,4 +1,4 @@
-<a href="https://alexanderm-code.github.io/"><img src="assets/readme/portada.svg" width="100%" alt="Alexander Mejía Ospina, estudiante de Ingeniería de Software en la Universidad Cooperativa de Colombia, Medellín. Backend con Java y Spring Boot, datos con Python y SQL, web con React. Disponible desde ya para práctica empresarial."></a>
+<a href="https://alexanderm-code.github.io/"><picture><source media="(max-width: 700px)" srcset="assets/readme/movil/portada.svg"><img src="assets/readme/portada.svg" width="100%" alt="Alexander Mejía Ospina, estudiante de Ingeniería de Software en la Universidad Cooperativa de Colombia, Medellín. Backend con Java y Spring Boot, datos con Python y SQL, web con React. Disponible desde ya para práctica empresarial."></picture></a>
 
 <p align="center">
   <a href="https://alexanderm-code.github.io/"><img src="assets/readme/btn-portafolio.svg" height="44" alt="Ver portafolio"></a>
@@ -11,10 +11,10 @@
 Estudiante de Ingeniería de Software (VII semestre) en la Universidad Cooperativa de Colombia, Medellín. Construyo **APIs con Java y Spring Boot**, **pipelines y análisis de datos con Python y SQL** y **sitios web con React**, con pruebas automáticas y desplegados en producción. Busco mi **práctica empresarial en desarrollo de software o análisis de datos**, disponible desde ya.
 
 <p>
-  <a href="https://alexanderm-code.github.io/observatorio-salud-antioquia/"><img src="assets/readme/proyecto-observatorio.svg" width="49%" alt="Observatorio de Salud Pública de Antioquia, en vivo: pipeline en Python y SQL sobre 1,18 millones de casos del SIVIGILA."></a>
-  <a href="https://cinex-api-lt2q.onrender.com/swagger-ui/index.html"><img src="assets/readme/proyecto-cinex.svg" width="49%" alt="CineX, en vivo: API REST en Java con Spring Boot y MySQL, con reglas de negocio y 17 pruebas."></a>
-  <a href="https://alexanderm-code.github.io/#proyectos"><img src="assets/readme/proyecto-numi.svg" width="49%" alt="Numi, en desarrollo: app educativa en Flutter con IA que funciona sin internet."></a>
-  <a href="https://casarendon.com"><img src="assets/readme/proyecto-casa-rendon.svg" width="49%" alt="Casa Rendón, cliente real en producción: sitio web en React."></a>
+  <a href="https://alexanderm-code.github.io/observatorio-salud-antioquia/"><picture><source media="(max-width: 700px)" srcset="assets/readme/movil/proyecto-observatorio.svg"><img src="assets/readme/proyecto-observatorio.svg" width="49%" alt="Observatorio de Salud Pública de Antioquia, en vivo: pipeline en Python y SQL sobre 1,18 millones de casos del SIVIGILA."></picture></a>
+  <a href="https://cinex-api-lt2q.onrender.com/swagger-ui/index.html"><picture><source media="(max-width: 700px)" srcset="assets/readme/movil/proyecto-cinex.svg"><img src="assets/readme/proyecto-cinex.svg" width="49%" alt="CineX, en vivo: API REST en Java con Spring Boot y MySQL, con reglas de negocio y 17 pruebas."></picture></a>
+  <a href="https://alexanderm-code.github.io/#proyectos"><picture><source media="(max-width: 700px)" srcset="assets/readme/movil/proyecto-numi.svg"><img src="assets/readme/proyecto-numi.svg" width="49%" alt="Numi, en desarrollo: app educativa en Flutter con IA que funciona sin internet."></picture></a>
+  <a href="https://casarendon.com"><picture><source media="(max-width: 700px)" srcset="assets/readme/movil/proyecto-casa-rendon.svg"><img src="assets/readme/proyecto-casa-rendon.svg" width="49%" alt="Casa Rendón, cliente real en producción: sitio web en React."></picture></a>
 </p>
 
 <p align="center">
@@ -26,9 +26,9 @@ Estudiante de Ingeniería de Software (VII semestre) en la Universidad Cooperati
   <br><sub>Capturas, video y mi rol en cada proyecto en el <a href="https://alexanderm-code.github.io/">portafolio</a>.</sub>
 </p>
 
-<img src="assets/readme/trayectoria.svg" width="100%" alt="Trayectoria: 2023 Ingeniería de Software; 2025 CineX v1.0 en equipo y C++ Essentials 1; 2026 cuatro insignias de Google Cloud, Numi, Casa Rendón, CineX v2.0 y el Observatorio de Salud. Siguiente: práctica empresarial.">
+<picture><source media="(max-width: 700px)" srcset="assets/readme/movil/trayectoria.svg"><img src="assets/readme/trayectoria.svg" width="100%" alt="Trayectoria: 2023 Ingeniería de Software; 2025 CineX v1.0 en equipo y C++ Essentials 1; 2026 cuatro insignias de Google Cloud, Numi, Casa Rendón, CineX v2.0 y el Observatorio de Salud. Siguiente: práctica empresarial."></picture>
 
-<img src="assets/readme/stack.svg" width="100%" alt="Stack: Java, Spring Boot, Python, FastAPI, SQL, MySQL, pandas, Power BI, Looker Studio, Jupyter, HTML, CSS, JavaScript, React, Flutter, Dart, JUnit, pytest, Postman, Swagger, Docker, GitHub Actions y Git. Certificaciones de Google Cloud, Cisco y el Politécnico de Colombia.">
+<picture><source media="(max-width: 700px)" srcset="assets/readme/movil/stack.svg"><img src="assets/readme/stack.svg" width="100%" alt="Stack: Java, Spring Boot, Python, FastAPI, SQL, MySQL, pandas, Power BI, Looker Studio, Jupyter, HTML, CSS, JavaScript, React, Flutter, Dart, JUnit, pytest, Postman, Swagger, Docker, GitHub Actions y Git. Certificaciones de Google Cloud, Cisco y el Politécnico de Colombia."></picture>
 
 <p align="center"><sub>
   Credenciales:
@@ -38,11 +38,11 @@ Estudiante de Ingeniería de Software (VII semestre) en la Universidad Cooperati
   <a href="https://www.credly.com/badges/628cb654-0527-4793-85cb-10bc22ab2da6/public_url">C++ Essentials 1</a>
 </sub></p>
 
-<img src="assets/readme/contribuciones.svg" width="100%" alt="Contribuciones: mi actividad real del último año en GitHub.">
+<picture><source media="(max-width: 700px)" srcset="assets/readme/movil/contribuciones.svg"><img src="assets/readme/contribuciones.svg" width="100%" alt="Contribuciones: mi actividad real del último año en GitHub."></picture>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AlexanderM-Code/AlexanderM-Code/output/github-contribution-grid-snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AlexanderM-Code/AlexanderM-Code/output/github-contribution-grid-snake.svg">
   <img src="https://raw.githubusercontent.com/AlexanderM-Code/AlexanderM-Code/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Una serpiente recorre mi gráfico de contribuciones del último año">
 </picture>
 
-<a href="mailto:alexmejia0112@gmail.com"><img src="assets/readme/cierre.svg" width="100%" alt="¿Tu equipo necesita un practicante? Desarrollo de software o análisis de datos, disponible desde ya. alexmejia0112@gmail.com"></a>
+<a href="mailto:alexmejia0112@gmail.com"><picture><source media="(max-width: 700px)" srcset="assets/readme/movil/cierre.svg"><img src="assets/readme/cierre.svg" width="100%" alt="¿Tu equipo necesita un practicante? Desarrollo de software o análisis de datos, disponible desde ya. alexmejia0112@gmail.com"></picture></a>
