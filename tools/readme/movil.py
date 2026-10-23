@@ -148,7 +148,7 @@ def stack_movil():
                 + f'<text x="180" y="{y + 98}" class="mono" font-size="26" fill="{C["ink3"]}">{e(d)}</text>')
         y += 140
     y += 30
-    for k, (a, b) in enumerate([("PRUEBAS", "17"), ("SOLICITUDES", "26"), ("REGISTROS", "1,18 M")]):
+    for k, (a, b) in enumerate([("PRUEBAS", "17"), ("SOLICITUDES", "26"), ("CASOS", "1,18 M")]):
         x = 48 + k * 310
         out += (f'<text x="{x}" y="{y}" class="mono" font-size="26" fill="{C["ink3"]}">{e(a)}</text>'
                 f'<text x="{x}" y="{y + 64}" class="px" font-size="64" fill="{C["amber"]}">{e(b)}</text>')
