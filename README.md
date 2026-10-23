@@ -130,7 +130,7 @@ class Alexander extends Developer {
     'Apps móviles con Flutter',
   ];
 
-  final String enCurso  = 'Diplomado en Programación en Java · Politécnico de Colombia';
+  final String diplomados = 'Programación en Java y en JavaScript · Politécnico de Colombia';
   final String buscando = 'Práctica empresarial (disponible desde ya): desarrollo de software o análisis de datos';
   final String ingles   = 'B1';
 
