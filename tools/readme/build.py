@@ -587,7 +587,7 @@ def stack():
                 + r(938, yy + 22, 4, 4, C["green"], ' class="pix"') + r(942, yy + 26, 4, 4, C["green"], ' class="pix"')
                 + r(946, yy + 22, 4, 4, C["green"], ' class="pix"') + r(950, yy + 18, 4, 4, C["green"], ' class="pix"')
                 + r(954, yy + 14, 4, 4, C["green"], ' class="pix"') + "</g>")
-    stats = [("PRUEBAS", "17"), ("SOLICITUDES", "26"), ("REGISTROS", "1,18 M")]
+    stats = [("PRUEBAS", "17"), ("SOLICITUDES", "26"), ("CASOS", "1,18 M")]
     nums = ""
     for k, (a, b) in enumerate(stats):
         x = 640 + k * 112
@@ -604,7 +604,7 @@ def stack():
     return documento(W, H, "Inventario: Java, Spring Boot, Python, FastAPI, SQL, MySQL, pandas, Power BI, Looker Studio, Jupyter, HTML, CSS, JavaScript, React, "
                      "Flutter, Dart, JUnit, pytest, Postman, Swagger, Docker, GitHub Actions y Git. Insignias: Google Cloud Implementing Cloud Load Balancing for Compute Engine, "
                      "Set Up an App Dev Environment, dos Google Cloud Computing Foundations, C++ Essentials 1 de Cisco y diplomados en Java y JavaScript del Politécnico de Colombia. "
-                     "17 pruebas, 26 solicitudes de Postman y 1,18 millones de registros.",
+                     "17 pruebas, 26 solicitudes de Postman y 1,18 millones de casos analizados.",
                      cuerpo)
 
 
