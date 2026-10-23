@@ -121,7 +121,7 @@
 | [Implementing Cloud Load Balancing for Compute Engine](https://www.skills.google/public_profiles/05106f72-2ef7-404d-96e6-e24611f5a363/badges/23257863) · insignia de habilidad | <img src="https://skillicons.dev/icons?i=gcp" height="20" /> Google Cloud | Mar. 2026 |
 | [Set Up an App Dev Environment on Google Cloud](https://www.skills.google/public_profiles/05106f72-2ef7-404d-96e6-e24611f5a363/badges/23629586) · insignia de habilidad | <img src="https://skillicons.dev/icons?i=gcp" height="20" /> Google Cloud | Abr. 2026 |
 | [Google Cloud Computing Foundations](https://www.skills.google/public_profiles/05106f72-2ef7-404d-96e6-e24611f5a363) · 2 insignias de finalización | <img src="https://skillicons.dev/icons?i=gcp" height="20" /> Google Cloud | 2026 |
-| C++ Essentials 1 | <img src="https://skillicons.dev/icons?i=cpp" height="20" /> Cisco Networking Academy y OpenEDG C++ Institute | Oct. 2025 |
+| [C++ Essentials 1](https://www.credly.com/badges/628cb654-0527-4793-85cb-10bc22ab2da6/public_url) | <img src="https://skillicons.dev/icons?i=cpp" height="20" /> Cisco Networking Academy y OpenEDG C++ Institute | Oct. 2025 |
 | Diplomados en Programación en Java y en JavaScript | Politécnico de Colombia | Finalizados |
 
 ---
