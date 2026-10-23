@@ -7,6 +7,7 @@
   <a href="https://www.linkedin.com/in/alexander-mejia-ospina"><img src="assets/readme/btn-linkedin.svg" height="44" alt="LinkedIn"></a>
   <a href="mailto:alexmejia0112@gmail.com"><img src="assets/readme/btn-correo.svg" height="44" alt="Correo"></a>
 </p>
+<p align="center"><sub><a href="https://alexanderm-code.github.io/cv/Resume_Alexander_Mejia_Ospina_EN.pdf">Resume in English (PDF)</a></sub></p>
 
 Estudiante de Ingeniería de Software (VII semestre) en la Universidad Cooperativa de Colombia, Medellín. Construyo **APIs con Java y Spring Boot**, **pipelines y análisis de datos con Python y SQL** y **sitios web con React**, con pruebas automáticas y desplegados en producción. Busco mi **práctica empresarial en desarrollo de software o análisis de datos**, disponible desde ya.
 
