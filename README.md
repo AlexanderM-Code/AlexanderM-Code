@@ -28,7 +28,7 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://alexanderm-code.github.io/observatorio-salud-antioquia/"><img alt="Observatorio de Salud Pública de Antioquia" src="https://alexanderm-code.github.io/assets/observatorio.webp" width="100%" /></a>
+      <a href="https://alexanderm-code.github.io/observatorio-salud-antioquia/"><img alt="Observatorio de Salud Pública de Antioquia" src="./assets/proyectos/observatorio.webp" width="100%" /></a>
       <p><img alt="En vivo" src="https://img.shields.io/badge/EN_VIVO-e2560e?style=flat-square" /> <sub><code>Proyecto personal · 2026</code></sub></p>
       <h3>Observatorio de Salud Pública de Antioquia</h3>
       <p>Pipeline de datos, API y página pública sobre <b>1,18 millones</b> de casos notificados al SIVIGILA en Antioquia entre 2007 y 2022.</p>
@@ -41,7 +41,7 @@
       <p><code>Python</code> <code>pandas</code> <code>SQL</code> <code>MySQL</code> <code>FastAPI</code> <code>pytest</code> <code>Docker</code> <code>GitHub Actions</code></p>
     </td>
     <td width="50%" valign="top">
-      <a href="https://alexanderm-code.github.io/CineX---Proyecto-Final/"><img alt="CineX" src="https://alexanderm-code.github.io/assets/cinex-admin.webp" width="100%" /></a>
+      <a href="https://alexanderm-code.github.io/CineX---Proyecto-Final/"><img alt="CineX" src="./assets/proyectos/cinex.webp" width="100%" /></a>
       <p><img alt="En vivo" src="https://img.shields.io/badge/EN_VIVO-e2560e?style=flat-square" /> <sub><code>Equipo 2025 · v2.0 individual 2026</code></sub></p>
       <h3>CineX</h3>
       <p>Sistema de gestión de cine: cartelera con películas reales de TMDB, salas, funciones, venta de sillas, confitería, usuarios y reservas.</p>
@@ -56,7 +56,7 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://github.com/geminitodo5-sketch/app-educativa-medellin"><img alt="Numi" src="https://alexanderm-code.github.io/assets/numi-asistente.webp" width="100%" /></a>
+      <a href="https://github.com/geminitodo5-sketch/app-educativa-medellin"><img alt="Numi" src="./assets/proyectos/numi.webp" width="100%" /></a>
       <p><img alt="En desarrollo" src="https://img.shields.io/badge/EN_DESARROLLO-2141b5?style=flat-square" /> <sub><code>App móvil · Equipo · 2026</code></sub></p>
       <h3>Numi</h3>
       <p>App educativa que funciona sin internet, con un asistente de IA que corre en el propio celular, para niños de zonas rurales de Medellín.</p>
@@ -65,7 +65,7 @@
       <p><code>Flutter</code> <code>Dart</code> <code>Riverpod</code> <code>SQLite</code> <code>Gemma 2B</code> <code>FastAPI</code> <code>Firebase</code></p>
     </td>
     <td width="50%" valign="top">
-      <a href="https://casarendon.com"><img alt="Casa Rendón" src="https://alexanderm-code.github.io/assets/casa-rendon.webp" width="100%" /></a>
+      <a href="https://casarendon.com"><img alt="Casa Rendón" src="./assets/proyectos/casa-rendon.webp" width="100%" /></a>
       <p><img alt="Cliente real, en producción" src="https://img.shields.io/badge/CLIENTE_REAL_·_EN_PRODUCCIÓN-1c8a4b?style=flat-square" /> <sub><code>Web · Equipo · 2026</code></sub></p>
       <h3>Casa Rendón</h3>
       <p>El sitio de una familia que hace café y vino artesanal en Andes, Antioquia.</p>
