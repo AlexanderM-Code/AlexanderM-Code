@@ -24,6 +24,7 @@ Estudiante de Ingeniería de Software (VII semestre) en la Universidad Cooperati
   <a href="https://github.com/AlexanderM-Code/CineX---Proyecto-Final"><img src="assets/readme/chip-cinex.svg" height="34" alt="Código de CineX"></a>
   <a href="https://github.com/geminitodo5-sketch/app-educativa-medellin"><img src="assets/readme/chip-numi.svg" height="34" alt="Código de Numi"></a>
   <a href="https://github.com/AlexanderM-Code/Entre-sorbos---Casa-Rendon"><img src="assets/readme/chip-casa-rendon.svg" height="34" alt="Código de Casa Rendón"></a>
+  <br>
   <a href="https://github.com/AlexanderM-Code/sistema-eventos-academicos"><img src="assets/readme/chip-eventos.svg" height="34" alt="Código de Eventos académicos"></a>
   <a href="https://github.com/AlexanderM-Code/Computacion-Ubicua"><img src="assets/readme/chip-arduino.svg" height="34" alt="Código de Arduino y cerradura RFID"></a>
   <a href="https://github.com/luism7p7/BlackJack"><img src="assets/readme/chip-blackjack.svg" height="34" alt="Código de BlackJack, proyecto en equipo"></a>
