@@ -715,6 +715,8 @@ def main():
         "chip-numi.svg": chip("Numi", "codigo"),
         "chip-casa-rendon.svg": chip("Casa Rendón", "codigo"),
         "chip-eventos.svg": chip("Eventos académicos", "codigo"),
+        "chip-arduino.svg": chip("Arduino · RFID", "codigo"),
+        "chip-blackjack.svg": chip("BlackJack", "codigo"),
         "chip-portafolio.svg": chip("Capturas, video y mi rol en el portafolio", "enlace"),
         "chip-cred-balancing.svg": chip("Cloud Load Balancing", "credencial"),
         "chip-cred-appdev.svg": chip("App Dev Environment", "credencial"),
