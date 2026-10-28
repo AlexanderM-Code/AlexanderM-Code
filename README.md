@@ -39,11 +39,9 @@ Estudiante de Ingeniería de Software (VII semestre) en la Universidad Cooperati
   <a href="https://www.credly.com/badges/628cb654-0527-4793-85cb-10bc22ab2da6/public_url">C++ Essentials 1</a>
 </sub></p>
 
-<picture><source media="(max-width: 700px)" srcset="assets/readme/movil/contribuciones.svg"><img src="assets/readme/contribuciones.svg" width="100%" alt="Contribuciones: mi actividad real del último año en GitHub."></picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AlexanderM-Code/AlexanderM-Code/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AlexanderM-Code/AlexanderM-Code/output/github-contribution-grid-snake.svg">
-  <img src="https://raw.githubusercontent.com/AlexanderM-Code/AlexanderM-Code/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Una serpiente recorre mi gráfico de contribuciones del último año">
+  <source media="(max-width: 700px)" srcset="https://raw.githubusercontent.com/AlexanderM-Code/AlexanderM-Code/output/contribuciones-movil.svg">
+  <img src="https://raw.githubusercontent.com/AlexanderM-Code/AlexanderM-Code/output/contribuciones.svg" width="100%" alt="Mis contribuciones del último año en GitHub dibujadas como un edificio de Medellín de noche: cada ventana encendida es un día que programé. Se actualiza todos los días.">
 </picture>
 
 <a href="mailto:alexmejia0112@gmail.com"><picture><source media="(max-width: 700px)" srcset="assets/readme/movil/cierre.svg"><img src="assets/readme/cierre.svg" width="100%" alt="¿Tu equipo necesita un practicante? Desarrollo de software o análisis de datos, disponible desde ya. alexmejia0112@gmail.com"></picture></a>

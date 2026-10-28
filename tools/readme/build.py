@@ -549,26 +549,59 @@ def proyecto_casa():
 # ======================================================================
 # 5. Inventario (stack) e insignias
 # ======================================================================
+HERRAMIENTAS = [
+    ("BACKEND", [
+        ("java", "Java", "API REST con reglas de negocio", "CineX"),
+        ("springboot", "Spring Boot", "capas, JPA, validaciones y Swagger", "CineX"),
+        ("python", "Python", "ETL que limpia 1,18 M de casos", "Observatorio"),
+        ("fastapi", "FastAPI", "API de solo lectura de los datos", "Observatorio"),
+    ]),
+    ("DATOS", [
+        ("sql", "SQL", "CTE, ventanas y canal endémico", "Observatorio"),
+        ("mysql", "MySQL", "modelo estrella y esquema de la API", "Observatorio · CineX"),
+        ("pandas", "pandas", "limpieza y validación de datos", "Observatorio"),
+        ("powerbi", "Power BI · Looker", "tableros de datos en clase", "Académico"),
+    ]),
+    ("WEB Y MÓVIL", [
+        ("react", "React", "componentes del sitio de un cliente", "Casa Rendón"),
+        ("javascript", "JavaScript", "panel web que consume la API", "CineX"),
+        ("flutter", "Flutter", "app con IA que funciona sin internet", "Numi"),
+    ]),
+    ("CALIDAD Y DEVOPS", [
+        ("junit5", "JUnit · Mockito", "17 pruebas de la API", "CineX"),
+        ("pytest", "pytest", "pruebas del pipeline y la API", "Observatorio"),
+        ("githubactions", "GitHub Actions", "CI y datos actualizados cada mes", "CineX · Observatorio"),
+        ("docker", "Docker", "todo el entorno con un comando", "CineX · Observatorio"),
+        ("postman", "Postman", "26 solicitudes automatizadas", "CineX"),
+    ]),
+]
+
+
 def stack():
-    W, H = 1000, 500
-    grupos = [
-        ("BACKEND", [("java", "Java"), ("springboot", "Spring Boot"), ("python", "Python"), ("fastapi", "FastAPI")], "CineX, Observatorio"),
-        ("DATOS", [("sql", "SQL"), ("mysql", "MySQL"), ("pandas", "pandas"), ("powerbi", "Power BI"), ("looker", "Looker"), ("jupyter", "Jupyter")], "Observatorio, Analítica de Datos"),
-        ("WEB Y MÓVIL", [("html5", "HTML"), ("css", "CSS"), ("javascript", "JS"), ("react", "React"), ("flutter", "Flutter"), ("dart", "Dart")], "Casa Rendón, Numi"),
-        ("CALIDAD Y DEVOPS", [("junit5", "JUnit"), ("pytest", "pytest"), ("postman", "Postman"), ("swagger", "Swagger"), ("docker", "Docker"), ("githubactions", "Actions"), ("git", "Git")], "CineX, Observatorio"),
-    ]
-    izq = ""
-    y = 96
-    for k, (g, items, donde) in enumerate(grupos):
-        izq += (f'<text x="32" y="{y}" class="px" font-size="16" fill="{C["cyan"]}" letter-spacing="1">{e(g)}</text>'
-                f'<text x="{32 + len(g) * 11 + 18}" y="{y}" class="mono" font-size="10.5" fill="{C["ink3"]}">{e(donde)}</text>')
-        for j, (slug, nombre) in enumerate(items):
-            x = 32 + j * 80
-            ic = icono_custom(slug, x + 14, y + 14, 40) if slug in ("powerbi", "sql", "java") else icono(slug, x + 14, y + 14, 40)
-            izq += (f'<g class="rise" style="animation-delay:{.15 + k * .2 + j * .05:.2f}s">'
-                    + marco(x + 4, y + 8, 60, 52, "#0b1f2a", C["line"], 3, False) + ic
-                    + f'<text x="{x + 34}" y="{y + 78}" text-anchor="middle" class="sg" font-size="11.5" fill="{C["ink2"]}">{e(nombre)}</text></g>')
-        y += 98
+    W = 1000
+    izq = (f'<text x="32" y="86" class="mono" font-size="10.5" fill="{C["ink3"]}" letter-spacing="1">HERRAMIENTA</text>'
+           f'<text x="186" y="86" class="mono" font-size="10.5" fill="{C["ink3"]}" letter-spacing="1">PARA QUÉ LA USÉ</text>'
+           f'<text x="590" y="86" text-anchor="end" class="mono" font-size="10.5" fill="{C["ink3"]}" letter-spacing="1">DÓNDE</text>'
+           + r(32, 94, 558, 2, C["line2"], ' class="pix"'))
+    y = 104
+    fila = 0
+    for g, items in HERRAMIENTAS:
+        y += 8
+        izq += f'<text x="32" y="{y + 16}" class="px" font-size="16" fill="{C["cyan"]}" letter-spacing="1">{e(g)}</text>'
+        y += 26
+        for slug, nombre, uso, donde in items:
+            if fila % 2 == 0:
+                izq += r(28, y, 566, 30, "#0d222b", ' class="pix"')
+            ic = icono_custom(slug, 34, y + 4, 22) if slug in ("powerbi", "sql", "java") else icono(slug, 34, y + 4, 22)
+            izq += (ic
+                    + f'<text x="66" y="{y + 20}" class="sgb" font-size="13.5" fill="{C["ink"]}">{e(nombre)}</text>'
+                    + f'<text x="186" y="{y + 20}" class="sg" font-size="13" fill="{C["ink2"]}">{e(uso)}</text>'
+                    + f'<text x="590" y="{y + 20}" text-anchor="end" class="mono" font-size="11" fill="{C["amber"]}">{e(donde)}</text>')
+            y += 30
+            fila += 1
+    H = y + 34
+    izq += f'<text x="32" y="{y + 22}" class="mono" font-size="10.5" fill="{C["ink3"]}">También: HTML, CSS, Dart, SQLite, Firebase, Jupyter, Git, Maven, Gradle, Scrum</text>'
+    H += 14
     certs = [
         ("googlecloud", "Cloud Load Balancing", "Google Cloud · mar. 2026"),
         ("googlecloud", "App Dev Environment", "Google Cloud · abr. 2026"),
@@ -593,16 +626,22 @@ def stack():
         x = 640 + k * 112
         nums += (f'<text x="{x}" y="418" class="mono" font-size="11" fill="{C["ink3"]}" letter-spacing="1">{e(a)}</text>'
                  f'<text x="{x}" y="450" class="px" font-size="32" fill="{C["amber"]}">{e(b)}</text>')
+    der += (marco(640, 492, 326, 126, "#0b1f2a", C["amber"], 3, False)
+            + f'<text x="658" y="520" class="px" font-size="16" fill="{C["amber"]}" letter-spacing="1">APRENDIENDO AHORA</text>'
+            + led(658, 540, C["amber"], 8)
+            + f'<text x="676" y="548" class="sg" font-size="13.5" fill="{C["ink"]}">Tablero en Power BI con los datos</text>'
+            + f'<text x="676" y="566" class="sg" font-size="13.5" fill="{C["ink"]}">del Observatorio</text>'
+            + led(658, 584, C["amber"], 8, .5)
+            + f'<text x="676" y="592" class="sg" font-size="13.5" fill="{C["ink"]}">Análisis de datos con Python</text>')
     cuerpo = (panel(W, H)
-              + titulo_panel(32, 50, "INVENTARIO", "lo que uso y dónde", "", 560)
+              + titulo_panel(32, 50, "INVENTARIO", "qué uso, para qué y dónde", "", 560)
               + r(612, 30, 4, H - 64, C["line"], ' class="pix"')
               + f'<text x="640" y="50" class="px" font-size="24" fill="{C["amber"]}" letter-spacing="1">INSIGNIAS</text>'
               + f'<text x="966" y="49" text-anchor="end" class="sg" font-size="14" fill="{C["ink2"]}">verificables</text>'
               + izq + der
               + r(640, 390, 326, 4, C["line"], ' class="pix"')
               + nums)
-    return documento(W, H, "Inventario: Java, Spring Boot, Python, FastAPI, SQL, MySQL, pandas, Power BI, Looker Studio, Jupyter, HTML, CSS, JavaScript, React, "
-                     "Flutter, Dart, JUnit, pytest, Postman, Swagger, Docker, GitHub Actions y Git. Insignias: Google Cloud Implementing Cloud Load Balancing for Compute Engine, "
+    return documento(W, H, "Inventario: " + "; ".join(f"{n}: {u} ({d})" for _, it in HERRAMIENTAS for _, n, u, d in it) + ". Insignias: Google Cloud Implementing Cloud Load Balancing for Compute Engine, "
                      "Set Up an App Dev Environment, dos Google Cloud Computing Foundations, C++ Essentials 1 de Cisco y diplomados en Java y JavaScript del Politécnico de Colombia. "
                      "17 pruebas, 26 solicitudes de Postman y 1,18 millones de casos analizados.",
                      cuerpo)
@@ -658,7 +697,6 @@ def main():
         "proyecto-numi.svg": proyecto_numi(),
         "proyecto-casa-rendon.svg": proyecto_casa(),
         "stack.svg": stack(),
-        "contribuciones.svg": contribuciones(),
         "cierre.svg": cierre(),
     }
     import movil

@@ -1,0 +1,43 @@
+# Dibuja mis contribuciones de GitHub como un edificio de Medellín de noche
+# (tools/readme/contribuciones.py) y lo publica en la rama output.
+name: Edificio de contribuciones
+
+on:
+  schedule:
+    - cron: "23 10 * * *"   # todos los días, 5:23 a. m. en Medellín
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/contribuciones.yml"
+      - "tools/readme/**"
+
+permissions:
+  contents: write
+
+jobs:
+  generar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install fonttools brotli
+
+      - name: Dibujar el edificio con mis contribuciones reales
+        run: python tools/readme/contribuciones.py dist
+        env:
+          GH_USER: ${{ github.repository_owner }}
+
+      - name: Publicar en la rama output
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

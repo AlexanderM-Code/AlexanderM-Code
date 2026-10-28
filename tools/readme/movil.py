@@ -110,12 +110,7 @@ def trayectoria_movil():
 
 
 def stack_movil():
-    grupos = [
-        ("BACKEND", [("java", "Java"), ("springboot", "Spring"), ("python", "Python"), ("fastapi", "FastAPI")]),
-        ("DATOS", [("sql", "SQL"), ("mysql", "MySQL"), ("pandas", "pandas"), ("powerbi", "Power BI"), ("looker", "Looker"), ("jupyter", "Jupyter")]),
-        ("WEB Y MÓVIL", [("html5", "HTML"), ("css", "CSS"), ("javascript", "JS"), ("react", "React"), ("flutter", "Flutter"), ("dart", "Dart")]),
-        ("CALIDAD Y DEVOPS", [("junit5", "JUnit"), ("pytest", "pytest"), ("postman", "Postman"), ("swagger", "Swagger"), ("docker", "Docker"), ("githubactions", "Actions"), ("git", "Git")]),
-    ]
+    from build import HERRAMIENTAS
     certs = [
         ("googlecloud", "Cloud Load Balancing", "Google Cloud · 2026"),
         ("googlecloud", "App Dev Environment", "Google Cloud · 2026"),
@@ -124,19 +119,21 @@ def stack_movil():
         ("java", "Diplomados Java y JS", "Politécnico de Colombia"),
     ]
     W = 1000
-    out = f'<text x="48" y="96" class="px" font-size="56" fill="{C["amber"]}">INVENTARIO</text>'
-    y = 170
-    por_fila, celda = 6, 150
-    for g, items in grupos:
-        out += f'<text x="48" y="{y}" class="px" font-size="40" fill="{C["cyan"]}">{e(g)}</text>'
-        y += 30
-        for j, (slug, nombre) in enumerate(items):
-            fx, fy = j % por_fila, j // por_fila
-            x = 48 + fx * celda
-            yy = y + fy * 170
-            ic = icono_custom(slug, x + 18, yy + 14, 88) if slug in ("powerbi", "sql", "java") else icono(slug, x + 18, yy + 14, 88)
-            out += (ic + f'<text x="{x + 62}" y="{yy + 142}" text-anchor="middle" class="sg" font-size="28" fill="{C["ink2"]}">{e(nombre)}</text>')
-        y += ((len(items) - 1) // por_fila + 1) * 170 + 40
+    out = (f'<text x="48" y="96" class="px" font-size="56" fill="{C["amber"]}">INVENTARIO</text>'
+           f'<text x="48" y="146" class="sg" font-size="32" fill="{C["ink2"]}">Qué uso, para qué y dónde</text>')
+    y = 200
+    for g, items in HERRAMIENTAS:
+        out += f'<text x="48" y="{y + 30}" class="px" font-size="40" fill="{C["cyan"]}">{e(g)}</text>'
+        y += 56
+        for slug, nombre, uso, donde in items:
+            ic = icono_custom(slug, 64, y + 18, 72) if slug in ("powerbi", "sql", "java") else icono(slug, 64, y + 18, 72)
+            out += (marco(48, y, W - 100, 108, "#0b1f2a", C["line"], 5, False) + ic
+                    + f'<text x="160" y="{y + 48}" class="sgb" font-size="34" fill="{C["ink"]}">{e(nombre)}</text>'
+                    + f'<text x="930" y="{y + 48}" text-anchor="end" class="mono" font-size="24" fill="{C["amber"]}">{e(donde)}</text>'
+                    + f'<text x="160" y="{y + 88}" class="sg" font-size="28" fill="{C["ink2"]}">{e(uso)}</text>')
+            y += 120
+        y += 20
+    y += 80
     y += 30
     out += r(48, y - 60, W - 100, 6, C["line"], ' class="pix"')
     out += f'<text x="48" y="{y + 20}" class="px" font-size="56" fill="{C["amber"]}">INSIGNIAS</text>'
@@ -203,6 +200,5 @@ def generar():
                                                         "Casa Rendón, cliente real: sitio web en React en producción."),
         "movil/trayectoria.svg": trayectoria_movil(),
         "movil/stack.svg": stack_movil(),
-        "movil/contribuciones.svg": contribuciones_movil(),
         "movil/cierre.svg": cierre_movil(),
     }

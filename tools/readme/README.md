@@ -8,3 +8,5 @@ python tools/readme/build.py
 ```
 
 Para cambiar un dato (un proyecto, una cifra, una certificación), edítalo en `build.py` y vuelve a ejecutarlo. Fuentes: Tiny5, Space Grotesk y JetBrains Mono (OFL). Íconos: Simple Icons (CC0).
+
+`contribuciones.py` dibuja mis contribuciones reales de GitHub como un edificio de Medellín de noche (cada ventana es un día). Lo ejecuta todos los días el workflow `contribuciones.yml` y lo publica en la rama `output`. Para probarlo sin internet: `CONTRIB_DEMO=1 python tools/readme/contribuciones.py dist`.
