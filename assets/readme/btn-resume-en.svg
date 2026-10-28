@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="157" height="46" viewBox="0 0 157 46" role="img" aria-label="Resume (EN)"><title>Resume (EN)</title><style>@font-face{font-family:SG7;src:url(data:font/woff2;base64,d09GMgABAAAAAAScABAAAAAACTAAAARAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbgXwcKgZgP1NUQVQqAHQRCAqFUIRKATYCJAMsCxgABCAFhCQHIAwHG3wHUVRRdgH8SMjcrtEMpwqpEYSQW053zk1Qpgo/8BgP/z+H3veTlIiOH7KqXCtHCkEBCkUgNMoZVz3UqJYf8l5fMCXlh0ozJXEaiJrXAe5/gHDY1++3KniFSBdvgSFESlk++viIaXVNtMCQGBpDFW0aioZ0N/3yTb+U6tk2JLyNCbXANCsN9v/FBOoASUiqhECNMdrQHfauviBwispJAwE5lGWBOBmblQaHEQi5pEpS4whEGxyFEYrUqdOFKP5x6lQLNeUfJr/Rf/ODDaR4UVX/q9VogjoAx6oEBxWE7PIf7fn8lej6iqdJgUyeHR62MZ1feoIinWMmVuepP31SkO6lQAD79WniKGjHKOIE/C/atR/Ac0Nys+3/++TXEVkgIL6mWxiCCaFKoA2CPuiF+IQcBJAERJ4+gYQMbTCBNrh1oI0QTG6IEjvuvMVKlS23FEMUPVavP3rbZRdMGNSju4C/EqL8XyOoBR1ALb4QfQDka0okSWB1XV1nTU/lxCyLRiOLenWYVVuEk2FZnAgncN/uzRsboGLdEC7fBwRSeYIgUIxsXkNMwmqUatrcvP1bW+RcD9/kRjlnScRvYHk9mBxbJe4tkxkJ5PASeX9BjTy59M5MBFZ5h2i6RxVU06Z/wOjtmVp5E6m8oS//ZHO1YPseoeU7NkvcuwYV1/XkHm+swM31qFA9aMUKmreQIFECIQY8WC4RTeswAYoV0hhZ5aYyLiw+cd361oMC86PSBdKnbQvA+tbvJooWVaUqhr6bpjWlpudjxGdh4naelnlB+WnNKqdV7NrhijENa2VCWVtzDBT4nTPMzbPc+dzNstLNnZ2SLU2yXFUSaQ4Wunpic3F6O64ByrfMXxg/1NK5CPYfSvRp05e09H6gCe4YqTvLq7qb2peZKQ3IqzzTkWufDXR+qtiHzy1bLOoQiKmOsdkFVy8Z+UmbaTknuwf6pDqROTK5grKygSxOHvNSYbCkq657hi+gh4z9dTXCzBTLxA3jdYwtXO3+lH0osaJds9KA2q/p/W6u4yWsEgWoIp0nJTWlpFaglnJS4duptGQbKJWWktE3D4xHAwgkNl7NvF0TNP1dlWXfYeOx9CB8q/yUU9ZkbemXUCGB4Jc0d/YIVVnbN4tqvYvW/CPNsE5jPbHgXitQz1bBPvGZScfAOtqsxC0Eas1G6CPWVTsNE3k1PmNzwoRHnKTKT05mk0+c3FIscQo9sc6uMBeXJYK6eIvnex27XboMhbIkipcghyRtmr1Xku8oMRb5zPNTom1BB1nS5XizJRPuOUZMYkbL8VrJ1VECUNbjl6S4M/DyDNmMadAQLxHZXFHUUZ8ulYY4KevqE1HSJKP2wGKhNJizs5BWEz++UoZm17Mh68ubIqYhdcbkZBP2XJi0bnSuN6vxCOKZJdnvL/YszETpbkkZjC5yOEAs7Bghr3zcitx38b92eCsAAA==) format("woff2")}
+.px{font-family:PX,'Courier New',monospace;font-weight:400}
+.sg{font-family:SG5,'Segoe UI',system-ui,sans-serif;font-weight:500}
+.sgb{font-family:SG7,'Segoe UI',system-ui,sans-serif;font-weight:700}
+.mono{font-family:JB4,ui-monospace,Consolas,monospace}
+.monob{font-family:JB7,ui-monospace,Consolas,monospace;font-weight:700}
+.pix{shape-rendering:crispEdges}
+@keyframes blink{50%{opacity:0}}
+@keyframes tw{0%,100%{opacity:1}50%{opacity:.25}}
+@keyframes win{0%,60%{opacity:1}70%,90%{opacity:.15}}
+@keyframes led{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes grow{from{transform:scaleY(0)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.cursor{animation:blink 1s steps(1) infinite}
+.tw{animation:tw 3s steps(3) infinite}
+.win{animation:win 7s steps(1) infinite}
+.led{animation:led 1.6s steps(2) infinite}
+.rise{opacity:0;animation:rise .5s steps(4) forwards}
+.bar{transform-box:fill-box;transform-origin:bottom;animation:grow .9s steps(6) both}
+.bob{animation:bob 1.8s steps(2) infinite}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;opacity:1!important}}
+</style><g class="pix"><rect x="3" y="42" width="147" height="3" fill="#050d12"/><rect x="153" y="3" width="3" height="39" fill="#050d12"/><rect x="3" y="0" width="147" height="42" fill="#2f5a68"/><rect x="0" y="3" width="153" height="36" fill="#2f5a68"/><rect x="6" y="3" width="141" height="36" fill="#163240"/><rect x="3" y="6" width="147" height="30" fill="#163240"/></g><rect x="16" y="17" width="8" height="8" fill="#4fc3f7" class="pix"/><text x="34" y="27" class="sgb" font-size="15.5" fill="#eaf4f7">Resume (EN)</text></svg>

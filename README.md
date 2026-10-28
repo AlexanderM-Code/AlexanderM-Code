@@ -6,8 +6,8 @@
   <a href="https://alexanderm-code.github.io/cv/CV_Alexander_Mejia_Ospina_Analista_Datos.pdf"><img src="assets/readme/btn-cv-datos.svg" height="44" alt="Hoja de vida para análisis de datos (PDF)"></a>
   <a href="https://www.linkedin.com/in/alexander-mejia-ospina"><img src="assets/readme/btn-linkedin.svg" height="44" alt="LinkedIn"></a>
   <a href="mailto:alexmejia0112@gmail.com"><img src="assets/readme/btn-correo.svg" height="44" alt="Correo"></a>
+  <a href="https://alexanderm-code.github.io/cv/Resume_Alexander_Mejia_Ospina_EN.pdf"><img src="assets/readme/btn-resume-en.svg" height="44" alt="Resume in English (PDF)"></a>
 </p>
-<p align="center"><sub><a href="https://alexanderm-code.github.io/cv/Resume_Alexander_Mejia_Ospina_EN.pdf">Resume in English (PDF)</a></sub></p>
 
 Estudiante de Ingeniería de Software (VII semestre) en la Universidad Cooperativa de Colombia, Medellín. Construyo **APIs con Java y Spring Boot**, **pipelines y análisis de datos con Python y SQL** y **sitios web con React**, con pruebas automáticas y desplegados en producción. Busco mi **práctica empresarial en desarrollo de software o análisis de datos**, disponible desde ya.
 
@@ -19,25 +19,27 @@ Estudiante de Ingeniería de Software (VII semestre) en la Universidad Cooperati
 </p>
 
 <p align="center">
-  Código: <a href="https://github.com/AlexanderM-Code/observatorio-salud-antioquia">Observatorio</a> ·
-  <a href="https://github.com/AlexanderM-Code/CineX---Proyecto-Final">CineX</a> ·
-  <a href="https://github.com/geminitodo5-sketch/app-educativa-medellin">Numi</a> ·
-  <a href="https://github.com/AlexanderM-Code/Entre-sorbos---Casa-Rendon">Casa Rendón</a> ·
-  <a href="https://github.com/AlexanderM-Code/sistema-eventos-academicos">Eventos académicos</a>
-  <br><sub>Capturas, video y mi rol en cada proyecto en el <a href="https://alexanderm-code.github.io/">portafolio</a>.</sub>
+  <img src="assets/readme/chip-codigo.svg" height="34" alt="Código:">
+  <a href="https://github.com/AlexanderM-Code/observatorio-salud-antioquia"><img src="assets/readme/chip-observatorio.svg" height="34" alt="Código del Observatorio"></a>
+  <a href="https://github.com/AlexanderM-Code/CineX---Proyecto-Final"><img src="assets/readme/chip-cinex.svg" height="34" alt="Código de CineX"></a>
+  <a href="https://github.com/geminitodo5-sketch/app-educativa-medellin"><img src="assets/readme/chip-numi.svg" height="34" alt="Código de Numi"></a>
+  <a href="https://github.com/AlexanderM-Code/Entre-sorbos---Casa-Rendon"><img src="assets/readme/chip-casa-rendon.svg" height="34" alt="Código de Casa Rendón"></a>
+  <a href="https://github.com/AlexanderM-Code/sistema-eventos-academicos"><img src="assets/readme/chip-eventos.svg" height="34" alt="Código de Eventos académicos"></a>
+  <br>
+  <a href="https://alexanderm-code.github.io/#proyectos"><img src="assets/readme/chip-portafolio.svg" height="34" alt="Capturas, video y mi rol en cada proyecto en el portafolio"></a>
 </p>
 
 <picture><source media="(max-width: 700px)" srcset="assets/readme/movil/trayectoria.svg"><img src="assets/readme/trayectoria.svg" width="100%" alt="Trayectoria: 2023 Ingeniería de Software; 2025 CineX v1.0 en equipo y C++ Essentials 1; 2026 cuatro insignias de Google Cloud, Numi, Casa Rendón, CineX v2.0 y el Observatorio de Salud. Siguiente: práctica empresarial."></picture>
 
 <picture><source media="(max-width: 700px)" srcset="assets/readme/movil/stack.svg"><img src="assets/readme/stack.svg" width="100%" alt="Stack: Java, Spring Boot, Python, FastAPI, SQL, MySQL, pandas, Power BI, Looker Studio, Jupyter, HTML, CSS, JavaScript, React, Flutter, Dart, JUnit, pytest, Postman, Swagger, Docker, GitHub Actions y Git. Certificaciones de Google Cloud, Cisco y el Politécnico de Colombia."></picture>
 
-<p align="center"><sub>
-  Credenciales:
-  <a href="https://www.skills.google/public_profiles/05106f72-2ef7-404d-96e6-e24611f5a363/badges/23257863">Cloud Load Balancing</a> ·
-  <a href="https://www.skills.google/public_profiles/05106f72-2ef7-404d-96e6-e24611f5a363/badges/23629586">App Dev Environment</a> ·
-  <a href="https://www.skills.google/public_profiles/05106f72-2ef7-404d-96e6-e24611f5a363">Computing Foundations</a> ·
-  <a href="https://www.credly.com/badges/628cb654-0527-4793-85cb-10bc22ab2da6/public_url">C++ Essentials 1</a>
-</sub></p>
+<p align="center">
+  <img src="assets/readme/chip-credenciales.svg" height="34" alt="Credenciales:">
+  <a href="https://www.skills.google/public_profiles/05106f72-2ef7-404d-96e6-e24611f5a363/badges/23257863"><img src="assets/readme/chip-cred-balancing.svg" height="34" alt="Credencial: Cloud Load Balancing"></a>
+  <a href="https://www.skills.google/public_profiles/05106f72-2ef7-404d-96e6-e24611f5a363/badges/23629586"><img src="assets/readme/chip-cred-appdev.svg" height="34" alt="Credencial: App Dev Environment"></a>
+  <a href="https://www.skills.google/public_profiles/05106f72-2ef7-404d-96e6-e24611f5a363"><img src="assets/readme/chip-cred-foundations.svg" height="34" alt="Credencial: Computing Foundations"></a>
+  <a href="https://www.credly.com/badges/628cb654-0527-4793-85cb-10bc22ab2da6/public_url"><img src="assets/readme/chip-cred-cpp.svg" height="34" alt="Credencial: C++ Essentials 1"></a>
+</p>
 
 <picture>
   <source media="(max-width: 700px)" srcset="https://raw.githubusercontent.com/AlexanderM-Code/AlexanderM-Code/output/contribuciones-movil.svg">

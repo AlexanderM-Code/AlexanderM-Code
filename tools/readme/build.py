@@ -370,6 +370,22 @@ def boton(texto, primario):
     return documento(W, H, texto, cuerpo)
 
 
+def chip(texto, tipo="enlace"):
+    """Botón pequeño para filas de enlaces. tipo: enlace | etiqueta | codigo | credencial."""
+    if tipo == "etiqueta":
+        W = int(len(texto) * 10.6 + 22)
+        H = 34
+        cuerpo = f'<text x="2" y="23" class="px" font-size="16" fill="{C["amber"]}" letter-spacing="1">{e(texto)}</text>'
+        return documento(W, H, texto, cuerpo)
+    W = int(len(texto) * 7.25 + (58 if tipo == "codigo" else 48))
+    H = 34
+    marca = {"codigo": ("</>", C["cyan"]), "credencial": ("✓", C["green"]), "enlace": ("›", C["amber"])}[tipo]
+    cuerpo = (marco(0, 0, W - 3, H - 3, C["panel"], C["line2"], 3, True)
+              + f'<text x="13" y="21" class="monob" font-size="11.5" fill="{marca[1]}">{e(marca[0])}</text>'
+              + f'<text x="{37 if tipo == "codigo" else 28}" y="21.5" class="sgb" font-size="13.5" fill="{C["ink"]}">{e(texto)}</text>')
+    return documento(W, H, texto, cuerpo)
+
+
 # ======================================================================
 # 3. Trayectoria: línea del metro
 # ======================================================================
@@ -691,6 +707,19 @@ def main():
         "btn-cv-datos.svg": boton("Hoja de vida · Datos", False),
         "btn-linkedin.svg": boton("LinkedIn", False),
         "btn-correo.svg": boton("Correo", False),
+        "btn-resume-en.svg": boton("Resume (EN)", False),
+        "chip-codigo.svg": chip("CÓDIGO", "etiqueta"),
+        "chip-credenciales.svg": chip("CREDENCIALES", "etiqueta"),
+        "chip-observatorio.svg": chip("Observatorio", "codigo"),
+        "chip-cinex.svg": chip("CineX", "codigo"),
+        "chip-numi.svg": chip("Numi", "codigo"),
+        "chip-casa-rendon.svg": chip("Casa Rendón", "codigo"),
+        "chip-eventos.svg": chip("Eventos académicos", "codigo"),
+        "chip-portafolio.svg": chip("Capturas, video y mi rol en el portafolio", "enlace"),
+        "chip-cred-balancing.svg": chip("Cloud Load Balancing", "credencial"),
+        "chip-cred-appdev.svg": chip("App Dev Environment", "credencial"),
+        "chip-cred-foundations.svg": chip("Computing Foundations", "credencial"),
+        "chip-cred-cpp.svg": chip("C++ Essentials 1", "credencial"),
         "trayectoria.svg": trayectoria(),
         "proyecto-observatorio.svg": proyecto_observatorio(),
         "proyecto-cinex.svg": proyecto_cinex(),
