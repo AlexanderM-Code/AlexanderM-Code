@@ -26,13 +26,13 @@ SALIDA = RAIZ / "assets" / "readme"
 ICONOS = json.loads((AQUI / "icons" / "icons.json").read_text())
 random.seed(7)
 
-# ---------- Paleta: noche en Medellín, azul petróleo y cian ----------
+# ---------- Paleta: noche en Medellín, grafito con naranja, azul y verde (igual que el portafolio) ----------
 C = {
-    "bg": "#0a1820", "panel": "#10242d", "panel2": "#163240", "line": "#24414b", "line2": "#2f5a68",
-    "cyan": "#4fc3f7", "cyan2": "#9be3ff", "ink": "#eaf4f7", "ink2": "#a9c3cb", "ink3": "#7d9ca6",
-    "green": "#3fd68f", "amber": "#ffb74d", "amber2": "#ffd28a", "red": "#ff6b6b", "tile": "#eaf4f7",
-    "sky": ["#071223", "#0a1830", "#0e2140", "#132b4d", "#183859", "#1f4664"],
-    "mont1": "#123543", "mont2": "#0d2833", "city": "#0a1d26", "ground": "#0b1419", "grass": "#2f7a5a",
+    "bg": "#0e1013", "panel": "#121418", "panel2": "#1c1f25", "line": "#2a2d33", "line2": "#3d4250",
+    "cyan": "#8ea8ff", "cyan2": "#c3d0ff", "ink": "#ece8df", "ink2": "#bdbab2", "ink3": "#9a978f",
+    "green": "#4cc97f", "amber": "#ff8a3d", "amber2": "#ffb27a", "red": "#ff8a80", "tile": "#ece8df",
+    "sky": ["#0b0d11", "#0e1015", "#11141a", "#151820", "#191d26", "#1e232e"],
+    "mont1": "#262a33", "mont2": "#1d2028", "city": "#16191f", "ground": "#0c0e11", "grass": "#2e6a4b",
 }
 AJUSTE_COLOR = {"javascript": "#c9a800", "swagger": "#4f9a16", "react": "#149ec4", "openjdk": "#e76f00"}
 
@@ -105,7 +105,7 @@ def marco(x, y, w, h, fondo, borde, s=4, sombra=True):
     """Caja con esquinas escalonadas, borde grueso y sombra dura."""
     out = '<g class="pix">'
     if sombra:
-        out += r(x + s, y + h, w - 2 * s, s, "#050d12") + r(x + w, y + s, s, h - s, "#050d12")
+        out += r(x + s, y + h, w - 2 * s, s, "#07080a") + r(x + w, y + s, s, h - s, "#07080a")
     out += r(x + s, y, w - 2 * s, h, borde) + r(x, y + s, w, h - 2 * s, borde)
     out += r(x + 2 * s, y + s, w - 4 * s, h - 2 * s, fondo) + r(x + s, y + 2 * s, w - 2 * s, h - 4 * s, fondo)
     return out + "</g>"
@@ -183,7 +183,7 @@ ALEX_SALUDO = """
 ..BBBB..BBBB......
 """
 PALETA_ALEX = {"H": "#1a120d", "S": "#c98e64", "s": "#a8724e", "E": "#1a120d", "W": "#ffffff", "M": "#8a4b3a",
-               "T": "#1c1f24", "L": "#b7c4cc", "c": "#4fc3f7", "J": "#2c4a7a", "j": "#213860", "B": "#0e0e10"}
+               "T": "#1c1f24", "L": "#b7c4cc", "c": "#8ea8ff", "J": "#2c4a7a", "j": "#213860", "B": "#0e0e10"}
 
 
 def cielo(W, H, y0=0, opacidad=1.0):
@@ -256,10 +256,10 @@ def edificios(x0, x1, base, semilla, opacidad=1.0):
 
 def metrocable(xa, ya, xb, yb, n=3, dur=14):
     out = (f'<line x1="{xa}" y1="{ya}" x2="{xb}" y2="{yb}" stroke="#5c7d88" stroke-width="2"/>'
-           + r(xa - 6, ya, 12, 60, "#2a4752", ' class="pix"') + r(xb - 6, yb, 12, 80, "#2a4752", ' class="pix"'))
+           + r(xa - 6, ya, 12, 60, "#343844", ' class="pix"') + r(xb - 6, yb, 12, 80, "#343844", ' class="pix"'))
     for k in range(n):
-        out += ('<g><g class="pix">' + r(-1, 0, 2, 8, "#5c7d88") + r(-10, 8, 20, 14, "#e8eef0")
-                + r(-8, 11, 6, 5, "#4fc3f7") + r(2, 11, 6, 5, "#4fc3f7") + r(-10, 19, 20, 3, "#ffb74d") + "</g>"
+        out += ('<g><g class="pix">' + r(-1, 0, 2, 8, "#5c7d88") + r(-10, 8, 20, 14, "#ece8df")
+                + r(-8, 11, 6, 5, "#8ea8ff") + r(2, 11, 6, 5, "#8ea8ff") + r(-10, 19, 20, 3, "#ff8a3d") + "</g>"
                 f'<animateMotion dur="{dur}s" repeatCount="indefinite" begin="-{k * dur / n:.1f}s" path="M{xa} {ya}L{xb} {yb}"/></g>')
     return out
 
@@ -312,8 +312,8 @@ def portada():
         f'<text x="{48 + k * 232}" y="{suelo + 44}" class="px" font-size="16" fill="{C["amber"]}" letter-spacing="1">{e(a)}</text>'
         f'<text x="{48 + k * 232}" y="{suelo + 66}" class="sg" font-size="15" fill="{C["ink"]}">{e(b)}</text>'
         for k, (a, b) in enumerate(celdas))
-    luna = ('<g class="pix">' + r(612, 44, 24, 8, "#fff2c9") + r(604, 52, 40, 24, "#fff2c9") + r(612, 76, 24, 8, "#fff2c9")
-            + r(620, 56, 8, 8, "#f2dca0") + r(628, 68, 6, 6, "#f2dca0") + "</g>")
+    luna = ('<g class="pix">' + r(612, 44, 24, 8, "#ffd9b8") + r(604, 52, 40, 24, "#ffd9b8") + r(612, 76, 24, 8, "#ffd9b8")
+            + r(620, 56, 8, 8, "#ffc08f") + r(628, 68, 6, 6, "#ffc08f") + "</g>")
     cuerpo = (cielo(W, suelo)
               + estrellas(W, 200, 46, (590, 30, 660, 95), (30, 40, 690, 260))
               + luna
@@ -327,12 +327,12 @@ def portada():
               + r(0, suelo + 6, W, 2, "#1d5a43", ' class="pix"')
               # título
               + '<g class="rise" style="animation-delay:.2s">'
-              + f'<text x="46" y="98" class="px" font-size="64" fill="#030a14" opacity=".7">ALEXANDER</text>'
+              + f'<text x="46" y="98" class="px" font-size="64" fill="#08090c" opacity=".7">ALEXANDER</text>'
               + f'<text x="42" y="94" class="px" font-size="64" fill="{C["ink"]}">ALEXANDER</text>'
-              + f'<text x="46" y="170" class="px" font-size="64" fill="#030a14" opacity=".7">MEJÍA OSPINA</text>'
+              + f'<text x="46" y="170" class="px" font-size="64" fill="#08090c" opacity=".7">MEJÍA OSPINA</text>'
               + f'<text x="42" y="166" class="px" font-size="64" fill="{C["cyan"]}">MEJÍA OSPINA</text></g>'
               + f'<g class="rise" style="animation-delay:.5s"><text x="46" y="200" class="sg" font-size="17" fill="{C["ink"]}">Estudiante de Ingeniería de Software · Universidad Cooperativa de Colombia</text></g>'
-              + '<g class="rise" style="animation-delay:.7s">' + marco(44, 214, 432, 38, "#0b1f2a", C["green"], 4, True)
+              + '<g class="rise" style="animation-delay:.7s">' + marco(44, 214, 432, 38, "#101217", C["green"], 4, True)
               + led(62, 229, C["green"], 8) + f'<text x="80" y="238" class="sgb" font-size="15" fill="{C["ink"]}">Disponible desde ya para práctica empresarial</text></g>'
               # Alexander
               + f'<g class="bob">{sprite(ALEX, PALETA_ALEX, 880, suelo - 21 * 5, 5)}</g>'
@@ -399,8 +399,8 @@ def trayectoria():
     paso = (x1 - x0) / (len(hitos) - 1)
     via = '<g class="pix">'
     for x in range(40, W - 40, 70):
-        via += r(x, yv + 12, 14, H - yv - 40, "#173540") + r(x - 4, yv + 12, 22, 6, "#1d4350")
-    via += r(30, yv, W - 64, 12, "#2a4f5c") + r(30, yv + 2, W - 64, 3, "#7fa2ad") + "</g>"
+        via += r(x, yv + 12, 14, H - yv - 40, "#20232b") + r(x - 4, yv + 12, 22, 6, "#2a2e38")
+    via += r(30, yv, W - 64, 12, "#3a3e48") + r(30, yv + 2, W - 64, 3, "#9a978f") + "</g>"
     est = ""
     for k, (anio, t, s) in enumerate(hitos):
         x = round(x0 + k * paso)
@@ -413,13 +413,13 @@ def trayectoria():
         est += (f'<g class="rise" style="animation-delay:{.2 + k * .25:.2f}s">' + conector
                 + marco(x - 12, yv - 10, 24, 24, C["ink"], C["cyan"], 3, False)
                 + r(x - 4, yv - 2, 8, 8, C["cyan"], ' class="pix"')
-                + marco(bx, cy, ancho, 50, "#0b1f2a", C["line2"], 3, True)
+                + marco(bx, cy, ancho, 50, "#101217", C["line2"], 3, True)
                 + r(bx + 3, cy + 3, 4, 44, C["amber"], ' class="pix"')
                 + f'<text x="{bx + 16}" y="{cy + 20}" class="px" font-size="16" fill="{C["amber"]}">{anio}</text>'
                 + f'<text x="{bx + 74}" y="{cy + 20}" class="sgb" font-size="13" fill="{C["ink"]}">{e(t)}</text>'
                 + f'<text x="{bx + 16}" y="{cy + 38}" class="mono" font-size="10.5" fill="{C["ink3"]}">{e(s)}</text></g>')
-    tren = ('<g class="pix">' + r(0, 0, 76, 26, "#e8eef0") + r(0, 18, 76, 4, C["green"]) + r(70, 4, 6, 14, "#c7d2d6")
-            + "".join(r(8 + k * 16, 5, 10, 9, C["cyan"]) for k in range(4)) + r(-4, 26, 84, 4, "#33424a")
+    tren = ('<g class="pix">' + r(0, 0, 76, 26, "#ece8df") + r(0, 18, 76, 4, C["green"]) + r(70, 4, 6, 14, "#cfcbc2")
+            + "".join(r(8 + k * 16, 5, 10, 9, C["cyan"]) for k in range(4)) + r(-4, 26, 84, 4, "#3a3d42")
             + r(8, 30, 8, 4, "#111") + r(60, 30, 8, 4, "#111") + "</g>")
     cuerpo = (panel(W, H)
               + titulo_panel(32, 50, "TRAYECTORIA", "De la universidad a la práctica", "2023 → PRÁCTICA")
@@ -427,7 +427,7 @@ def trayectoria():
               + f'<g><g transform="translate(0 {yv - 34})">{tren}</g>'
               + f'<animateTransform attributeName="transform" type="translate" values="{x0 - 40} 0;{meta - 80} 0;{meta - 80} 0" keyTimes="0;.85;1" dur="9s" repeatCount="indefinite"/></g>'
               + '<g class="rise" style="animation-delay:1.8s">' + r(meta - 2, 128, 4, yv - 128, C["amber"], ' class="pix"')
-              + marco(meta - 62, 72, 124, 58, "#2a1f0b", C["amber"], 4, True)
+              + marco(meta - 62, 72, 124, 58, "#2e1a0c", C["amber"], 4, True)
               + f'<text x="{meta}" y="94" text-anchor="middle" class="px" font-size="16" fill="{C["amber"]}">SIGUIENTE</text>'
               + f'<text x="{meta}" y="117" text-anchor="middle" class="px" font-size="16" fill="{C["ink"]}">PRÁCTICA</text>'
               + marco(meta - 12, yv - 10, 24, 24, C["amber"], C["amber2"], 3, False) + "</g>")
@@ -440,7 +440,7 @@ def trayectoria():
 def tarjeta(estado, color, tipo, titulo, dato, visual, stack, accion, aria):
     W, H = 490, 340
     cuerpo = (marco(0, 0, W - 4, H - 4, C["panel"], C["line2"], 4, True)
-              + marco(20, 18, len(estado) * 11 + 46, 30, "#0b1f2a", color, 3, False)
+              + marco(20, 18, len(estado) * 11 + 46, 30, "#101217", color, 3, False)
               + led(32, 29, color, 8)
               + f'<text x="48" y="39" class="px" font-size="16" fill="{color}" letter-spacing="1">{e(estado)}</text>'
               + f'<text x="{W - 26}" y="38" text-anchor="end" class="mono" font-size="11" fill="{C["ink3"]}">{e(tipo)}</text>'
@@ -454,7 +454,7 @@ def tarjeta(estado, color, tipo, titulo, dato, visual, stack, accion, aria):
 
 
 def pantalla(x, y, w, h):
-    return marco(x, y, w, h, "#07141a", C["line2"], 4, False)
+    return marco(x, y, w, h, "#0b0c0f", C["line2"], 4, False)
 
 
 def proyecto_observatorio():
@@ -465,7 +465,7 @@ def proyecto_observatorio():
     for k, v in enumerate(casos):
         bh = max(4, round(v / 28000 * h / 4) * 4)
         hot = v > 20000
-        barras += r(round(x0 + k * bw + 3), y0 - bh, round(bw - 6), bh, C["amber"] if hot else "#2f6f80",
+        barras += r(round(x0 + k * bw + 3), y0 - bh, round(bw - 6), bh, C["amber"] if hot else "#4a5b93",
                     f' class="bar pix" style="animation-delay:{.2 + k * .05:.2f}s"')
     vis = (pantalla(22, 126, 444, 154)
            + f'<text x="38" y="150" class="mono" font-size="10.5" fill="{C["ink3"]}">dengue · casos por año · 2007–2022</text>'
@@ -512,9 +512,9 @@ def proyecto_numi():
     vis = (pantalla(22, 126, 444, 154)
            + sprite(AVION, {"A": C["amber"]}, 38, 140, 2)
            + f'<text x="60" y="151" class="mono" font-size="10.5" fill="{C["amber"]}">modo avión · sin internet</text>'
-           + '<g class="rise" style="animation-delay:.4s">' + marco(262, 164, 188, 34, "#2f6f80", "#4b93a6", 3, False)
+           + '<g class="rise" style="animation-delay:.4s">' + marco(262, 164, 188, 34, "#4a5b93", "#6f86d9", 3, False)
            + f'<text x="278" y="186" class="sg" font-size="14" fill="{C["ink"]}">¿Cuánto es 7 × 8?</text></g>'
-           + '<g class="rise" style="animation-delay:1.1s">' + marco(38, 210, 250, 52, "#163240", C["line2"], 3, False)
+           + '<g class="rise" style="animation-delay:1.1s">' + marco(38, 210, 250, 52, "#1c1f25", C["line2"], 3, False)
            + f'<text x="54" y="232" class="sgb" font-size="14" fill="{C["ink"]}">7 × 8 = 56</text>'
            + f'<text x="54" y="250" class="mono" font-size="10.5" fill="{C["ink3"]}">Gemma 2B + RAG en el celular</text></g>')
     return tarjeta("EN DESARROLLO", C["cyan"], "equipo", "Numi",
@@ -601,7 +601,7 @@ def stack():
         y += 26
         for slug, nombre, uso, donde in items:
             if fila % 2 == 0:
-                izq += r(28, y, 566, 30, "#0d222b", ' class="pix"')
+                izq += r(28, y, 566, 30, "#15171c", ' class="pix"')
             ic = icono_custom(slug, 34, y + 4, 22) if slug in ("powerbi", "sql", "java") else icono(slug, 34, y + 4, 22)
             izq += (ic
                     + f'<text x="66" y="{y + 20}" class="sgb" font-size="13.5" fill="{C["ink"]}">{e(nombre)}</text>'
@@ -624,7 +624,7 @@ def stack():
         yy = 78 + k * 60
         ic = icono_custom("java", 650, yy + 7, 36) if slug == "java" else icono(slug, 650, yy + 7, 36)
         der += (f'<g class="rise" style="animation-delay:{.3 + k * .15:.2f}s">'
-                + marco(640, yy, 326, 50, "#0b1f2a", C["line"], 3, False) + ic
+                + marco(640, yy, 326, 50, "#101217", C["line"], 3, False) + ic
                 + f'<text x="698" y="{yy + 22}" class="sgb" font-size="13.5" fill="{C["ink"]}">{e(n)}</text>'
                 + f'<text x="698" y="{yy + 39}" class="mono" font-size="10.5" fill="{C["ink3"]}">{e(d)}</text>'
                 + r(938, yy + 22, 4, 4, C["green"], ' class="pix"') + r(942, yy + 26, 4, 4, C["green"], ' class="pix"')
@@ -636,7 +636,7 @@ def stack():
         x = 640 + k * 112
         nums += (f'<text x="{x}" y="418" class="mono" font-size="11" fill="{C["ink3"]}" letter-spacing="1">{e(a)}</text>'
                  f'<text x="{x}" y="450" class="px" font-size="32" fill="{C["amber"]}">{e(b)}</text>')
-    der += (marco(640, 492, 326, 126, "#0b1f2a", C["amber"], 3, False)
+    der += (marco(640, 492, 326, 126, "#101217", C["amber"], 3, False)
             + f'<text x="658" y="520" class="px" font-size="16" fill="{C["amber"]}" letter-spacing="1">APRENDIENDO AHORA</text>'
             + led(658, 538, C["amber"], 8)
             + f'<text x="676" y="546" class="sg" font-size="13.5" fill="{C["ink"]}">AWS: servicios en la nube</text>'
@@ -696,10 +696,10 @@ def en_linea():
 def cierre():
     W, H = 1000, 290
     suelo = 244
-    letrero = (marco(632, 36, 252, 70, "#0d3b2c", C["green"], 4, True)
+    letrero = (marco(632, 36, 252, 70, "#133a26", C["green"], 4, True)
                + f'<text x="758" y="62" text-anchor="middle" class="px" font-size="16" fill="#bff5da" letter-spacing="1">PRÓXIMA ESTACIÓN</text>'
                + f'<text x="758" y="92" text-anchor="middle" class="px" font-size="24" fill="#ffffff">TU EQUIPO</text>'
-               + r(690, 110, 4, suelo - 110, "#2a4752", ' class="pix"') + r(822, 110, 4, suelo - 110, "#2a4752", ' class="pix"'))
+               + r(690, 110, 4, suelo - 110, "#343844", ' class="pix"') + r(822, 110, 4, suelo - 110, "#343844", ' class="pix"'))
     cuerpo = (f'<clipPath id="cc"><rect x="4" y="4" width="{W - 12}" height="{H - 12}"/></clipPath>'
               + panel(W, H)
               + '<g clip-path="url(#cc)">' + cielo(W, suelo, 0, .6)

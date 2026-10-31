@@ -26,7 +26,7 @@ from build import C, cielo, documento, e, estrellas, led, marco, panel, r  # noq
 
 USUARIO = os.environ.get("GH_USER", "AlexanderM-Code")
 MESES = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"]
-VENTANA = {0: "#123039", 1: "#7a4f1c", 2: "#c2822a", 3: "#ffb74d", 4: "#ffe2a8"}
+VENTANA = {0: "#22252c", 1: "#6e3818", 2: "#c4622a", 3: "#ff8a3d", 4: "#ffd2ad"}
 
 
 # ---------------------------------------------------------------- datos
@@ -98,9 +98,9 @@ def ciudad(cols: list, x0: float, base: float, ancho: float, v: float, paso: flo
     for s, col in enumerate(cols):
         x = x0 + s * ancho
         techo = base - alto_ventanas - 10 - rnd.choice([0, 0, 6, 12, 18, 24])
-        out += r(round(x), round(techo), round(ancho - 2), round(base - techo), rnd.choice(["#0b1e27", "#0d2430", "#0a1a22"]))
+        out += r(round(x), round(techo), round(ancho - 2), round(base - techo), rnd.choice(["#15171c", "#1a1d23", "#121418"]))
         if rnd.random() < .18:
-            out += r(round(x + ancho / 2 - 1), round(techo - 10), 2, 10, "#2a4752")
+            out += r(round(x + ancho / 2 - 1), round(techo - 10), 2, 10, "#343844")
             out += r(round(x + ancho / 2 - 2), round(techo - 12), 4, 3, C["red"], ' class="led"')
         for d, dia in enumerate(col):
             wx = round(x + (ancho - 2 - v) / 2)
@@ -133,7 +133,7 @@ def meses(cols: list, x0: float, ancho: float, y: float, tam: float) -> str:
 
 def chip(x, y, valor, etiqueta, escala=1.0):
     w = 150 * escala
-    return (marco(x, y, w, 62 * escala, "#0b1f2a", C["line2"], 3 * escala, False)
+    return (marco(x, y, w, 62 * escala, "#101217", C["line2"], 3 * escala, False)
             + f'<text x="{x + 14 * escala:.0f}" y="{y + 32 * escala:.0f}" class="px" font-size="{24 * escala:.0f}" fill="{C["amber"]}">{e(str(valor))}</text>'
             + f'<text x="{x + 14 * escala:.0f}" y="{y + 50 * escala:.0f}" class="mono" font-size="{10.5 * escala:.1f}" fill="{C["ink2"]}">{e(etiqueta)}</text>')
 

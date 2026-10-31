@@ -32,13 +32,13 @@ def portada_movil():
               + metrocable(90, 600, 640, 660, 3, 16)
               + edificios(360, 700, suelo, 21)
               + r(0, suelo, W, H - suelo, C["ground"], ' class="pix"') + r(0, suelo, W, 8, C["grass"], ' class="pix"')
-              + f'<text x="68" y="166" class="px" font-size="104" fill="#030a14" opacity=".7">ALEXANDER</text>'
+              + f'<text x="68" y="166" class="px" font-size="104" fill="#08090c" opacity=".7">ALEXANDER</text>'
               + f'<text x="60" y="158" class="px" font-size="104" fill="{C["ink"]}">ALEXANDER</text>'
-              + f'<text x="68" y="290" class="px" font-size="104" fill="#030a14" opacity=".7">MEJÍA OSPINA</text>'
+              + f'<text x="68" y="290" class="px" font-size="104" fill="#08090c" opacity=".7">MEJÍA OSPINA</text>'
               + f'<text x="60" y="282" class="px" font-size="104" fill="{C["cyan"]}">MEJÍA OSPINA</text>'
               + f'<text x="64" y="356" class="sg" font-size="36" fill="{C["ink"]}">Estudiante de Ingeniería de Software</text>'
               + f'<text x="64" y="404" class="sg" font-size="36" fill="{C["ink"]}">Universidad Cooperativa de Colombia</text>'
-              + marco(60, 440, 880, 84, "#0b1f2a", C["green"], 6, True)
+              + marco(60, 440, 880, 84, "#101217", C["green"], 6, True)
               + led(96, 472, C["green"], 20)
               + f'<text x="134" y="494" class="sgb" font-size="36" fill="{C["ink"]}">Disponible desde ya para práctica</text>'
               + f'<g class="bob">{sprite(ALEX, PALETA_ALEX, 790, suelo - 21 * 9, 9)}</g>'
@@ -50,7 +50,7 @@ def portada_movil():
 def tarjeta_movil(estado, color, titulo, linea1, linea2, accion, aria):
     W, H = 490, 340
     cuerpo = (marco(0, 0, W - 6, H - 6, C["panel"], C["line2"], 6, True)
-              + marco(24, 24, len(estado) * 17 + 70, 46, "#0b1f2a", color, 4, False)
+              + marco(24, 24, len(estado) * 17 + 70, 46, "#101217", color, 4, False)
               + led(42, 39, color, 16)
               + f'<text x="70" y="56" class="px" font-size="24" fill="{color}">{e(estado)}</text>'
               + f'<text x="26" y="142" class="px" font-size="48" fill="{C["ink"]}">{e(titulo)}</text>'
@@ -68,7 +68,7 @@ def trayectoria_movil():
     y0, paso = 190, 186
     H = y0 + paso * len(hitos) + 210
     xv = 110
-    via = '<g class="pix">' + r(xv - 10, y0 - 30, 20, H - y0 - 20, "#2a4f5c") + r(xv - 4, y0 - 30, 6, H - y0 - 20, "#7fa2ad") + "</g>"
+    via = '<g class="pix">' + r(xv - 10, y0 - 30, 20, H - y0 - 20, "#3a3e48") + r(xv - 4, y0 - 30, 6, H - y0 - 20, "#9a978f") + "</g>"
     est = ""
     for k, (anio, t, s) in enumerate(hitos):
         y = y0 + k * paso
@@ -79,10 +79,10 @@ def trayectoria_movil():
                 + f'<text x="180" y="{y + 74}" class="mono" font-size="28" fill="{C["ink3"]}">{e(s)}</text></g>')
     ym = y0 + paso * len(hitos)
     meta = (marco(xv - 26, ym - 26, 52, 52, C["amber"], C["amber2"], 5, False)
-            + marco(170, ym - 76, 560, 140, "#2a1f0b", C["amber"], 6, True)
+            + marco(170, ym - 76, 560, 140, "#2e1a0c", C["amber"], 6, True)
             + f'<text x="206" y="{ym - 30}" class="px" font-size="32" fill="{C["amber"]}">SIGUIENTE</text>'
             + f'<text x="206" y="{ym + 42}" class="px" font-size="48" fill="{C["ink"]}">PRÁCTICA</text>')
-    tren = ('<g class="pix">' + r(-26, 0, 52, 90, "#e8eef0") + r(-26, 70, 52, 8, C["green"])
+    tren = ('<g class="pix">' + r(-26, 0, 52, 90, "#ece8df") + r(-26, 70, 52, 8, C["green"])
             + "".join(r(-16, 10 + k * 18, 32, 10, C["cyan"]) for k in range(3)) + "</g>")
     cuerpo = (panel(W, H)
               + f'<text x="48" y="96" class="px" font-size="56" fill="{C["amber"]}">TRAYECTORIA</text>'
@@ -110,7 +110,7 @@ def stack_movil():
         y += 56
         for slug, nombre, uso, donde in items:
             ic = icono_custom(slug, 64, y + 18, 72) if slug in ("powerbi", "sql", "java") else icono(slug, 64, y + 18, 72)
-            out += (marco(48, y, W - 100, 108, "#0b1f2a", C["line"], 5, False) + ic
+            out += (marco(48, y, W - 100, 108, "#101217", C["line"], 5, False) + ic
                     + f'<text x="160" y="{y + 48}" class="sgb" font-size="34" fill="{C["ink"]}">{e(nombre)}</text>'
                     + f'<text x="930" y="{y + 48}" text-anchor="end" class="mono" font-size="24" fill="{C["amber"]}">{e(donde)}</text>'
                     + f'<text x="160" y="{y + 88}" class="sg" font-size="28" fill="{C["ink2"]}">{e(uso)}</text>')
@@ -123,7 +123,7 @@ def stack_movil():
     y += 70
     for slug, n, d in certs:
         ic = icono_custom("java", 72, y + 20, 80) if slug == "java" else icono(slug, 72, y + 20, 80)
-        out += (marco(48, y, W - 100, 120, "#0b1f2a", C["line"], 5, False) + ic
+        out += (marco(48, y, W - 100, 120, "#101217", C["line"], 5, False) + ic
                 + f'<text x="180" y="{y + 56}" class="sgb" font-size="36" fill="{C["ink"]}">{e(n)}</text>'
                 + f'<text x="180" y="{y + 98}" class="mono" font-size="26" fill="{C["ink3"]}">{e(d)}</text>')
         y += 140
@@ -177,10 +177,10 @@ def cierre_movil():
               + f'<text x="60" y="410" class="sg" font-size="36" fill="{C["ink2"]}">Desarrollo de software o análisis</text>'
               + f'<text x="60" y="456" class="sg" font-size="36" fill="{C["ink2"]}">de datos · disponible desde ya</text>'
               + f'<text x="60" y="536" class="px" font-size="48" fill="{C["amber"]}">alexmejia0112@gmail.com</text>'
-              + marco(60, 600, 520, 140, "#0d3b2c", C["green"], 6, True)
+              + marco(60, 600, 520, 140, "#133a26", C["green"], 6, True)
               + f'<text x="320" y="656" text-anchor="middle" class="px" font-size="32" fill="#bff5da">PRÓXIMA ESTACIÓN</text>'
               + f'<text x="320" y="712" text-anchor="middle" class="px" font-size="48" fill="#ffffff">TU EQUIPO</text>'
-              + r(150, 740, 8, suelo - 740, "#2a4752", ' class="pix"') + r(482, 740, 8, suelo - 740, "#2a4752", ' class="pix"')
+              + r(150, 740, 8, suelo - 740, "#343844", ' class="pix"') + r(482, 740, 8, suelo - 740, "#343844", ' class="pix"')
               + sprite(ALEX_SALUDO, PALETA_ALEX, 760, suelo - 21 * 9, 9))
     return documento(W, H, "¿Tu equipo necesita un practicante? Desarrollo de software o análisis de datos, disponible desde ya. alexmejia0112@gmail.com", cuerpo)
 
