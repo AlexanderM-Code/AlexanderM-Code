@@ -34,7 +34,7 @@ Estudiante de Ingeniería de Software (VII semestre) en la Universidad Cooperati
 
 <picture><source media="(max-width: 700px)" srcset="assets/readme/movil/trayectoria.svg"><img src="assets/readme/trayectoria.svg" width="100%" alt="Trayectoria: 2023 Ingeniería de Software; 2025 CineX v1.0 en equipo y C++ Essentials 1; 2026 cuatro insignias de Google Cloud, Numi, Casa Rendón, CineX v2.0 y el Observatorio de Salud. Siguiente: práctica empresarial."></picture>
 
-<picture><source media="(max-width: 700px)" srcset="assets/readme/movil/stack.svg"><img src="assets/readme/stack.svg" width="100%" alt="Stack: Java, Spring Boot, Python, FastAPI, SQL, MySQL, pandas, Power BI, Looker Studio, Jupyter, HTML, CSS, JavaScript, React, Flutter, Dart, JUnit, pytest, Postman, Swagger, Docker, GitHub Actions y Git. Certificaciones de Google Cloud, Cisco y el Politécnico de Colombia."></picture>
+<picture><source media="(max-width: 700px)" srcset="assets/readme/movil/stack.svg"><img src="assets/readme/stack.svg" width="100%" alt="Stack: Java, Spring Boot, Python, FastAPI, SQL, MySQL, pandas, Power BI, Looker Studio, Jupyter, HTML, CSS, JavaScript, React, Flutter, Dart, JUnit, pytest, Postman, Swagger, Docker, GitHub Actions y Git. Certificaciones de Google Cloud, Cisco y el Politécnico de Colombia. Aprendiendo ahora: AWS."></picture>
 
 <p align="center">
   <img src="assets/readme/chip-credenciales.svg" height="34" alt="Credenciales:">

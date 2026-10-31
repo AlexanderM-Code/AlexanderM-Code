@@ -632,11 +632,12 @@ def stack():
                  f'<text x="{x}" y="450" class="px" font-size="32" fill="{C["amber"]}">{e(b)}</text>')
     der += (marco(640, 492, 326, 126, "#0b1f2a", C["amber"], 3, False)
             + f'<text x="658" y="520" class="px" font-size="16" fill="{C["amber"]}" letter-spacing="1">APRENDIENDO AHORA</text>'
-            + led(658, 540, C["amber"], 8)
-            + f'<text x="676" y="548" class="sg" font-size="13.5" fill="{C["ink"]}">Tablero en Power BI con los datos</text>'
-            + f'<text x="676" y="566" class="sg" font-size="13.5" fill="{C["ink"]}">del Observatorio</text>'
-            + led(658, 584, C["amber"], 8, .5)
-            + f'<text x="676" y="592" class="sg" font-size="13.5" fill="{C["ink"]}">Análisis de datos con Python</text>')
+            + led(658, 538, C["amber"], 8)
+            + f'<text x="676" y="546" class="sg" font-size="13.5" fill="{C["ink"]}">AWS: servicios en la nube</text>'
+            + led(658, 562, C["amber"], 8, .4)
+            + f'<text x="676" y="570" class="sg" font-size="13.5" fill="{C["ink"]}">Análisis de datos con Python</text>'
+            + led(658, 586, C["amber"], 8, .8)
+            + f'<text x="676" y="594" class="sg" font-size="13.5" fill="{C["ink"]}">Tablero en Power BI del Observatorio</text>')
     cuerpo = (panel(W, H)
               + titulo_panel(32, 50, "INVENTARIO", "qué uso, para qué y dónde", "", 560)
               + r(612, 30, 4, H - 64, C["line"], ' class="pix"')
@@ -647,7 +648,7 @@ def stack():
               + nums)
     return documento(W, H, "Inventario: " + "; ".join(f"{n}: {u} ({d})" for _, it in HERRAMIENTAS for _, n, u, d in it) + ". Insignias: Google Cloud Implementing Cloud Load Balancing for Compute Engine, "
                      "Set Up an App Dev Environment, dos Google Cloud Computing Foundations, C++ Essentials 1 de Cisco y diplomados en Java y JavaScript del Politécnico de Colombia. "
-                     "17 pruebas, 26 solicitudes de Postman y 1,18 millones de casos analizados.",
+                     "17 pruebas, 26 solicitudes de Postman y 1,18 millones de casos analizados. Aprendiendo ahora: AWS, análisis de datos con Python y un tablero en Power BI del Observatorio.",
                      cuerpo)
 
 
