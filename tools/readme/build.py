@@ -422,7 +422,7 @@ def trayectoria():
             + "".join(r(8 + k * 16, 5, 10, 9, C["cyan"]) for k in range(4)) + r(-4, 26, 84, 4, "#33424a")
             + r(8, 30, 8, 4, "#111") + r(60, 30, 8, 4, "#111") + "</g>")
     cuerpo = (panel(W, H)
-              + titulo_panel(32, 50, "TRAYECTORIA", "Línea A: de la universidad a la práctica", "2023 → PRÁCTICA")
+              + titulo_panel(32, 50, "TRAYECTORIA", "De la universidad a la práctica", "2023 → PRÁCTICA")
               + via + est
               + f'<g><g transform="translate(0 {yv - 34})">{tren}</g>'
               + f'<animateTransform attributeName="transform" type="translate" values="{x0 - 40} 0;{meta - 80} 0;{meta - 80} 0" keyTimes="0;.85;1" dur="9s" repeatCount="indefinite"/></g>'
