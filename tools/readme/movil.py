@@ -7,15 +7,15 @@ en formato vertical y con letra grande. El README las elige con
 """
 import random
 
-from build import (ALEX, ALEX_SALUDO, C, PALETA_ALEX, cielo, comuna, documento, e, edificios, estrellas, icono,
-                   icono_custom, led, marco, SERVICIOS, metrocable, montanas, panel, r, sprite)
+from build import (ALEX, ALEX_SALUDO, C, GRADO, PALETA_ALEX, cielo, comuna, detalle_svg, documento, e, edificios, estrellas,
+                   icono, icono_custom, led, marco, SERVICIOS, metrocable, montanas, panel, r, sprite)
 
 
 def portada_movil():
     W, H = 1000, 1060
     suelo = 780
     random.seed(17)
-    celdas = [("UBICACIÓN", "Medellín"), ("FORMACIÓN", "Ing. de Software · VII"),
+    celdas = [("UBICACIÓN", "Medellín"), ("FORMACIÓN", "Ing. Software · UCC · VII"),
               ("PRÁCTICA", "Disponible desde ya"), ("MODALIDAD", "Presencial o remota")]
     datos = ""
     for k, (a, b) in enumerate(celdas):
@@ -36,19 +36,19 @@ def portada_movil():
               + f'<text x="60" y="158" class="px" font-size="104" fill="{C["ink"]}">ALEXANDER</text>'
               + f'<text x="68" y="290" class="px" font-size="104" fill="#08090c" opacity=".7">MEJÍA OSPINA</text>'
               + f'<text x="60" y="282" class="px" font-size="104" fill="{C["cyan"]}">MEJÍA OSPINA</text>'
-              + f'<text x="64" y="356" class="sg" font-size="36" fill="{C["ink"]}">Estudiante de Ingeniería de Software</text>'
-              + f'<text x="64" y="404" class="sg" font-size="36" fill="{C["ink"]}">Universidad Cooperativa de Colombia</text>'
+              + f'<text x="64" y="356" class="sg" font-size="36" fill="{C["ink"]}">Construyo software para quienes suelen</text>'
+              + f'<text x="64" y="404" class="sg" font-size="36" fill="{C["ink"]}">quedar por fuera de la tecnología.</text>'
               + marco(60, 440, 880, 84, "#101217", C["green"], 6, True)
               + led(96, 472, C["green"], 20)
               + f'<text x="134" y="494" class="sgb" font-size="36" fill="{C["ink"]}">Disponible desde ya para práctica</text>'
               + f'<g class="bob">{sprite(ALEX, PALETA_ALEX, 790, suelo - 21 * 9, 9)}</g>'
               + datos)
     return documento(W, H, "Alexander Mejía Ospina, estudiante de Ingeniería de Software en la Universidad Cooperativa de Colombia, Medellín. "
-                     "Disponible desde ya para práctica empresarial.", cuerpo)
+                     "Construyo software para quienes suelen quedar por fuera de la tecnología. Disponible desde ya para práctica empresarial.", cuerpo)
 
 
-def tarjeta_movil(estado, color, titulo, linea1, linea2, accion, aria):
-    W, H = 490, 340
+def tarjeta_movil(estado, color, titulo, linea1, linea2, accion, aria, rol=""):
+    W, H = 490, 390
     cuerpo = (marco(0, 0, W - 6, H - 6, C["panel"], C["line2"], 6, True)
               + marco(24, 24, len(estado) * 17 + 70, 46, "#101217", color, 4, False)
               + led(42, 39, color, 16)
@@ -56,8 +56,9 @@ def tarjeta_movil(estado, color, titulo, linea1, linea2, accion, aria):
               + f'<text x="26" y="142" class="px" font-size="48" fill="{C["ink"]}">{e(titulo)}</text>'
               + f'<text x="28" y="196" class="sg" font-size="30" fill="{C["ink2"]}">{e(linea1)}</text>'
               + f'<text x="28" y="236" class="sg" font-size="30" fill="{C["ink2"]}">{e(linea2)}</text>'
-              + r(24, 260, W - 54, 6, C["line"], ' class="pix"')
-              + f'<text x="28" y="310" class="px" font-size="32" fill="{C["amber"]}">{e(accion)} ›</text>')
+              + f'<text x="28" y="282" class="sg" font-size="28" fill="{C["ink"]}"><tspan fill="{C["amber"]}">Mi rol:</tspan> {e(rol)}</text>'
+              + r(24, 306, W - 54, 6, C["line"], ' class="pix"')
+              + f'<text x="28" y="358" class="px" font-size="32" fill="{C["amber"]}">{e(accion)} ›</text>')
     return documento(W, H, aria, cuerpo)
 
 
@@ -65,7 +66,7 @@ def trayectoria_movil():
     from build import HITOS, TRAYECTORIA_ALT
     hitos = HITOS
     W = 1000
-    y0, paso = 190, 186
+    y0, paso = 240, 186
     H = y0 + paso * len(hitos) + 210
     xv = 110
     via = '<g class="pix">' + r(xv - 10, y0 - 30, 20, H - y0 - 20, "#3a3e48") + r(xv - 4, y0 - 30, 6, H - y0 - 20, "#9a978f") + "</g>"
@@ -76,16 +77,18 @@ def trayectoria_movil():
                 + marco(xv - 22, y - 22, 44, 44, C["ink"], C["cyan"], 5, False) + r(xv - 8, y - 8, 16, 16, C["cyan"], ' class="pix"')
                 + f'<text x="180" y="{y - 20}" class="px" font-size="40" fill="{C["amber"]}">{anio}</text>'
                 + f'<text x="180" y="{y + 30}" class="sgb" font-size="40" fill="{C["ink"]}">{e(t)}</text>'
-                + f'<text x="180" y="{y + 74}" class="mono" font-size="28" fill="{C["ink3"]}">{e(s)}</text></g>')
+                + detalle_svg(s, 180, y + 74, 28, 18, 16.8, 26) + '</g>')
     ym = y0 + paso * len(hitos)
     meta = (marco(xv - 26, ym - 26, 52, 52, C["amber"], C["amber2"], 5, False)
             + marco(170, ym - 76, 560, 140, "#2e1a0c", C["amber"], 6, True)
             + f'<text x="206" y="{ym - 30}" class="px" font-size="32" fill="{C["amber"]}">SIGUIENTE</text>'
-            + f'<text x="206" y="{ym + 42}" class="px" font-size="48" fill="{C["ink"]}">PRÁCTICA</text>')
+            + f'<text x="206" y="{ym + 42}" class="px" font-size="48" fill="{C["ink"]}">PRÁCTICA</text>'
+            + f'<text x="700" y="{ym + 40}" text-anchor="end" class="mono" font-size="26" fill="{C["amber2"]}">grado · {GRADO}</text>')
     tren = ('<g class="pix">' + r(-26, 0, 52, 90, "#ece8df") + r(-26, 70, 52, 8, C["green"])
             + "".join(r(-16, 10 + k * 18, 32, 10, C["cyan"]) for k in range(3)) + "</g>")
     cuerpo = (panel(W, H)
               + f'<text x="48" y="96" class="px" font-size="56" fill="{C["amber"]}">TRAYECTORIA</text>'
+              + detalle_svg([("individual", "i"), ("en equipo", "e")], 52, 146, 28, 18, 16.8, 40)
               + via + est + meta
               + f'<g><g transform="translate({xv} 0)">{tren}</g>'
               + f'<animateTransform attributeName="transform" type="translate" values="0 {y0 - 60};0 {ym - 120};0 {ym - 120}" keyTimes="0;.85;1" dur="9s" repeatCount="indefinite"/></g>')
@@ -189,13 +192,13 @@ def generar():
     return {
         "movil/portada.svg": portada_movil(),
         "movil/proyecto-observatorio.svg": tarjeta_movil("EN VIVO", C["green"], "OBSERVATORIO", "1,18 M casos de salud", "Python · SQL · MySQL", "VER EN VIVO",
-                                                         "Observatorio de Salud Pública de Antioquia, en vivo."),
+                                                         "Observatorio de Salud Pública de Antioquia, en vivo. Mi rol: todo el proyecto.", "todo el proyecto"),
         "movil/proyecto-cinex.svg": tarjeta_movil("EN VIVO", C["green"], "CINEX", "API en Spring Boot", "19 pruebas · MySQL", "PROBAR API",
-                                                  "CineX, en vivo: API REST en Spring Boot con 19 pruebas."),
+                                                  "CineX, en vivo: API REST en Spring Boot con 19 pruebas. Mi rol: toda la versión 2.0.", "toda la versión 2.0"),
         "movil/proyecto-numi.svg": tarjeta_movil("EN DESARROLLO", C["cyan"], "NUMI", "App con IA sin internet", "Flutter · equipo", "VER DETALLES",
-                                                 "Numi, en desarrollo: app educativa con IA que funciona sin internet."),
+                                                 "Numi, en desarrollo: app educativa con IA que funciona sin internet. Mi rol: arquitectura y RAG.", "arquitectura y RAG"),
         "movil/proyecto-casa-rendon.svg": tarjeta_movil("CLIENTE REAL", C["amber"], "CASA RENDÓN", "Sitio en producción", "React · equipo", "VISITAR",
-                                                        "Casa Rendón, cliente real: sitio web en React en producción."),
+                                                        "Casa Rendón, cliente real: sitio web en React en producción. Mi rol: diseño y desarrollo.", "diseño y desarrollo"),
         "movil/trayectoria.svg": trayectoria_movil(),
         "movil/stack.svg": stack_movil(),
         "movil/en-linea.svg": en_linea_movil(),

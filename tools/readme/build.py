@@ -306,7 +306,7 @@ def titulo_panel(x, y, titulo, sub="", derecha="", ancho=930):
 def portada():
     W, H = 1000, 470
     suelo = 372
-    celdas = [("UBICACIÓN", "Medellín, Colombia"), ("FORMACIÓN", "Ingeniería de Software · VII"),
+    celdas = [("UBICACIÓN", "Medellín, Colombia"), ("FORMACIÓN", "Ing. de Software · UCC · VII"),
               ("PRÁCTICA", "Disponible desde ya"), ("MODALIDAD", "Presencial, híbrida o remota")]
     datos = "".join(
         f'<text x="{48 + k * 232}" y="{suelo + 44}" class="px" font-size="16" fill="{C["amber"]}" letter-spacing="1">{e(a)}</text>'
@@ -331,14 +331,14 @@ def portada():
               + f'<text x="42" y="94" class="px" font-size="64" fill="{C["ink"]}">ALEXANDER</text>'
               + f'<text x="46" y="170" class="px" font-size="64" fill="#08090c" opacity=".7">MEJÍA OSPINA</text>'
               + f'<text x="42" y="166" class="px" font-size="64" fill="{C["cyan"]}">MEJÍA OSPINA</text></g>'
-              + f'<g class="rise" style="animation-delay:.5s"><text x="46" y="200" class="sg" font-size="17" fill="{C["ink"]}">Estudiante de Ingeniería de Software · Universidad Cooperativa de Colombia</text></g>'
+              + f'<g class="rise" style="animation-delay:.5s"><text x="46" y="200" class="sg" font-size="17" fill="{C["ink"]}">Construyo software para quienes suelen quedar por fuera de la tecnología.</text></g>'
               + '<g class="rise" style="animation-delay:.7s">' + marco(44, 214, 432, 38, "#101217", C["green"], 4, True)
               + led(62, 229, C["green"], 8) + f'<text x="80" y="238" class="sgb" font-size="15" fill="{C["ink"]}">Disponible desde ya para práctica empresarial</text></g>'
               # Alexander
               + f'<g class="bob">{sprite(ALEX, PALETA_ALEX, 880, suelo - 21 * 5, 5)}</g>'
               + datos)
-    return documento(W, H, "Alexander Mejía Ospina, estudiante de Ingeniería de Software en la Universidad Cooperativa de Colombia, Medellín. "
-                     "Disponible desde ya para práctica empresarial, presencial, híbrida o remota.",
+    return documento(W, H, "Alexander Mejía Ospina, estudiante de Ingeniería de Software (VII semestre) en la Universidad Cooperativa de Colombia, Medellín. "
+                     "Construyo software para quienes suelen quedar por fuera de la tecnología. Disponible desde ya para práctica empresarial, presencial, híbrida o remota.",
                      cuerpo)
 
 
@@ -367,7 +367,8 @@ def chip(texto, tipo="enlace"):
         return documento(W, H, texto, cuerpo)
     W = int(len(texto) * 7.25 + (58 if tipo == "codigo" else 48))
     H = 34
-    marca = {"codigo": ("</>", C["cyan"]), "credencial": ("✓", C["green"]), "enlace": ("›", C["amber"])}[tipo]
+    marca = {"codigo": ("</>", C["cyan"]), "credencial": ("✓", C["green"]), "enlace": ("›", C["amber"]),
+             "blanda": ("+", C["cyan"])}[tipo]
     cuerpo = (marco(0, 0, W - 3, H - 3, C["panel"], C["line2"], 3, True)
               + f'<text x="13" y="21" class="monob" font-size="11.5" fill="{marca[1]}">{e(marca[0])}</text>'
               + f'<text x="{37 if tipo == "codigo" else 28}" y="21.5" class="sgb" font-size="13.5" fill="{C["ink"]}">{e(texto)}</text>')
@@ -378,17 +379,37 @@ def chip(texto, tipo="enlace"):
 # 3. Trayectoria: línea del metro
 # ======================================================================
 # Hitos por semestre: los mismos de la trayectoria del portafolio
+# Cada detalle dice si fue individual ("i") o en equipo ("e"); None = sin marca.
 HITOS = [
-    ("2023-2", "Ingeniería de Software", "UCC · Medellín"),
-    ("2025-1", "BlackJack Royale", "Primer proyecto en equipo"),
-    ("2025-2", "Arduino y CineX v1", "C++ Essentials 1 · en equipo"),
-    ("2026-1", "Google Cloud y Numi", "Casa Rendón · cliente real"),
-    ("2026-2", "Diplomados Java y JS", "CineX v2 · Observatorio · Datos"),
+    ("2023-2", "Ingeniería de Software", [("UCC · Medellín", None)]),
+    ("2025-1", "BlackJack Royale", [("primer proyecto", "e")]),
+    ("2025-2", "Arduino y CineX v1", [("C++ y laboratorios", "i"), ("RFID · CineX", "e")]),
+    ("2026-1", "Google Cloud y Numi", [("4 insignias", "i"), ("Numi · Casa Rendón", "e")]),
+    ("2026-2", "Diplomados Java y JS", [("CineX v2 · Observatorio · Datos", "i")]),
 ]
+GRADO = "2027-1"
+MARCA = {"i": "green", "e": "cyan"}
+
+
+def detalle_svg(items, x, y, fs=10.5, cuadro=7, ancho_letra=6.35, sep=10):
+    """Detalle de un hito: cada parte con un cuadrito verde (individual) o azul (en equipo)."""
+    out = ""
+    for texto, tipo in items:
+        if tipo:
+            out += r(round(x), round(y - cuadro - 1), cuadro, cuadro, C[MARCA[tipo]], ' class="pix"')
+            x += cuadro + max(4, cuadro // 2)
+        out += f'<text x="{x:.0f}" y="{y}" class="mono" font-size="{fs}" fill="{C["ink3"]}">{e(texto)}</text>'
+        x += len(texto) * ancho_letra + sep
+    return out
+
+
+def detalle_ancho(items, cuadro=7, ancho_letra=6.35, sep=10):
+    return sum((cuadro + max(4, cuadro // 2) if t else 0) + len(s) * ancho_letra + sep for s, t in items) - sep
 TRAYECTORIA_ALT = ("Trayectoria por semestres como una línea de metro: 2023-2 empiezo Ingeniería de Software en la UCC; "
                    "2025-1 BlackJack Royale, primer proyecto en equipo; 2025-2 Arduino y cerradura RFID, C++ Essentials 1 y CineX v1 en equipo; "
                    "2026-1 cuatro insignias de Google Cloud, Numi y Casa Rendón; 2026-2 diplomados en Java y JavaScript, CineX v2, "
-                   "el Observatorio de Salud y Datos con Python. Siguiente estación: práctica empresarial.")
+                   "el Observatorio de Salud y Datos con Python. Siguiente estación: práctica empresarial. Grado previsto: 2027-1. "
+                   "Cada proyecto está marcado como individual (verde) o en equipo (azul).")
 
 
 def trayectoria():
@@ -406,7 +427,7 @@ def trayectoria():
         x = round(x0 + k * paso)
         arriba = k % 2 == 1
         cy = 86 if arriba else 250
-        ancho = round(max(70 + len(t) * 7.6, 26 + len(s) * 6.7))
+        ancho = round(max(70 + len(t) * 7.6, 32 + detalle_ancho(s)))
         bx = min(x - 14, W - 26 - ancho)
         conector = (r(x - 2, cy + 50, 4, yv - 10 - (cy + 50), C["line2"], ' class="pix"') if arriba
                     else r(x - 2, yv + 14, 4, cy - (yv + 14), C["line2"], ' class="pix"'))
@@ -417,19 +438,21 @@ def trayectoria():
                 + r(bx + 3, cy + 3, 4, 44, C["amber"], ' class="pix"')
                 + f'<text x="{bx + 16}" y="{cy + 20}" class="px" font-size="16" fill="{C["amber"]}">{anio}</text>'
                 + f'<text x="{bx + 74}" y="{cy + 20}" class="sgb" font-size="13" fill="{C["ink"]}">{e(t)}</text>'
-                + f'<text x="{bx + 16}" y="{cy + 38}" class="mono" font-size="10.5" fill="{C["ink3"]}">{e(s)}</text></g>')
+                + detalle_svg(s, bx + 16, cy + 39) + '</g>')
     tren = ('<g class="pix">' + r(0, 0, 76, 26, "#ece8df") + r(0, 18, 76, 4, C["green"]) + r(70, 4, 6, 14, "#cfcbc2")
             + "".join(r(8 + k * 16, 5, 10, 9, C["cyan"]) for k in range(4)) + r(-4, 26, 84, 4, "#3a3d42")
             + r(8, 30, 8, 4, "#111") + r(60, 30, 8, 4, "#111") + "</g>")
     cuerpo = (panel(W, H)
-              + titulo_panel(32, 50, "TRAYECTORIA", "De la universidad a la práctica", "2023 → PRÁCTICA")
+              + titulo_panel(32, 50, "TRAYECTORIA", "De la universidad a la práctica")
+              + detalle_svg([("individual", "i"), ("en equipo", "e")], 772, 48, 12, 9, 7.3, 18)
               + via + est
               + f'<g><g transform="translate(0 {yv - 34})">{tren}</g>'
               + f'<animateTransform attributeName="transform" type="translate" values="{x0 - 40} 0;{meta - 80} 0;{meta - 80} 0" keyTimes="0;.85;1" dur="9s" repeatCount="indefinite"/></g>'
-              + '<g class="rise" style="animation-delay:1.8s">' + r(meta - 2, 128, 4, yv - 128, C["amber"], ' class="pix"')
-              + marco(meta - 62, 72, 124, 58, "#2e1a0c", C["amber"], 4, True)
-              + f'<text x="{meta}" y="94" text-anchor="middle" class="px" font-size="16" fill="{C["amber"]}">SIGUIENTE</text>'
-              + f'<text x="{meta}" y="117" text-anchor="middle" class="px" font-size="16" fill="{C["ink"]}">PRÁCTICA</text>'
+              + '<g class="rise" style="animation-delay:1.8s">' + r(meta - 2, 146, 4, yv - 146, C["amber"], ' class="pix"')
+              + marco(meta - 62, 70, 124, 78, "#2e1a0c", C["amber"], 4, True)
+              + f'<text x="{meta}" y="92" text-anchor="middle" class="px" font-size="16" fill="{C["amber"]}">SIGUIENTE</text>'
+              + f'<text x="{meta}" y="115" text-anchor="middle" class="px" font-size="16" fill="{C["ink"]}">PRÁCTICA</text>'
+              + f'<text x="{meta}" y="135" text-anchor="middle" class="mono" font-size="10.5" fill="{C["amber2"]}">grado · {GRADO}</text>'
               + marco(meta - 12, yv - 10, 24, 24, C["amber"], C["amber2"], 3, False) + "</g>")
     return documento(W, H, TRAYECTORIA_ALT, cuerpo)
 
@@ -437,8 +460,8 @@ def trayectoria():
 # ======================================================================
 # 4. Tarjetas de proyecto
 # ======================================================================
-def tarjeta(estado, color, tipo, titulo, dato, visual, stack, accion, aria):
-    W, H = 490, 340
+def tarjeta(estado, color, tipo, titulo, dato, visual, stack, accion, aria, rol=""):
+    W, H = 490, 372
     cuerpo = (marco(0, 0, W - 4, H - 4, C["panel"], C["line2"], 4, True)
               + marco(20, 18, len(estado) * 11 + 46, 30, "#101217", color, 3, False)
               + led(32, 29, color, 8)
@@ -447,9 +470,11 @@ def tarjeta(estado, color, tipo, titulo, dato, visual, stack, accion, aria):
               + f'<text x="22" y="90" class="px" font-size="32" fill="{C["ink"]}">{e(titulo.upper())}</text>'
               + f'<text x="22" y="112" class="sg" font-size="14" fill="{C["ink2"]}">{e(dato)}</text>'
               + visual
-              + r(20, 290, W - 44, 4, C["line"], ' class="pix"')
-              + f'<text x="22" y="316" class="mono" font-size="11" fill="{C["ink3"]}">{e(stack)}</text>'
-              + f'<text x="{W - 26}" y="316" text-anchor="end" class="px" font-size="16" fill="{C["amber"]}">{e(accion.upper())} ›</text>')
+              + f'<text x="22" y="306" class="px" font-size="14" fill="{C["amber"]}" letter-spacing="1">MI ROL</text>'
+              + f'<text x="86" y="306" class="sg" font-size="13" fill="{C["ink"]}">{e(rol)}</text>'
+              + r(20, 322, W - 44, 4, C["line"], ' class="pix"')
+              + f'<text x="22" y="348" class="mono" font-size="11" fill="{C["ink3"]}">{e(stack)}</text>'
+              + f'<text x="{W - 26}" y="348" text-anchor="end" class="px" font-size="16" fill="{C["amber"]}">{e(accion.upper())} ›</text>')
     return documento(W, H, aria, cuerpo)
 
 
@@ -476,7 +501,8 @@ def proyecto_observatorio():
                    "1,18 M casos del SIVIGILA en Antioquia: ETL, SQL y web", vis,
                    "Python · pandas · SQL · MySQL · FastAPI · CI", "ver en vivo",
                    "Observatorio de Salud Pública de Antioquia, en vivo: pipeline en Python y SQL sobre 1,18 millones de casos del SIVIGILA. "
-                   "Gráfica de casos de dengue por año con epidemias en 2010 y 2016.")
+                   "Gráfica de casos de dengue por año con epidemias en 2010 y 2016. Mi rol: todo, de la extracción de los datos a la página publicada.",
+                   "todo, de la extracción de datos a la página publicada")
 
 
 def proyecto_cinex():
@@ -495,7 +521,8 @@ def proyecto_cinex():
                    "API REST en Spring Boot con reglas de negocio y 19 pruebas", vis,
                    "Java 21 · Spring Boot · MySQL · JUnit · Docker", "probar la API",
                    "CineX, en vivo: API REST en Java con Spring Boot y MySQL. Ejemplo: al pedir 3 sillas cuando quedan 2, responde 409. "
-                   "19 pruebas automáticas. Versión 1.0 en equipo, versión 2.0 individual.")
+                   "19 pruebas automáticas. Mi rol: en la v1.0, en equipo, integración y revisión de pull requests; la v2.0 la hice solo, con pruebas, CI y despliegue.",
+                   "v1: integración y PRs · v2: toda, con pruebas y CI")
 
 
 AVION = """
@@ -521,7 +548,8 @@ def proyecto_numi():
                    "App educativa con IA que funciona sin internet", vis,
                    "Flutter · Dart · SQLite · Gemma 2B · FastAPI", "ver detalles",
                    "Numi, en desarrollo, proyecto en equipo: app educativa en Flutter con un asistente de IA que corre en el celular sin internet. "
-                   "Mi rol: arquitectura, pantallas de Ciencias Naturales, RAG offline y diseño responsive.")
+                   "Mi rol: arquitectura, pantallas de Ciencias Naturales, RAG offline y diseño responsive.",
+                   "arquitectura, RAG offline y pantallas de Ciencias")
 
 
 TAZA = """
@@ -553,7 +581,8 @@ def proyecto_casa():
                    "Sitio en React para una marca de café y vino", vis,
                    "React · JavaScript · HTML · CSS", "visitar el sitio",
                    "Casa Rendón, cliente real en producción: sitio web en React de una marca de café y vino artesanal en Andes, Antioquia. "
-                   "Mi rol: diseño y desarrollo del sitio.")
+                   "Mi rol: diseño y desarrollo del sitio.",
+                   "diseño y desarrollo del sitio en React")
 
 
 # ======================================================================
@@ -729,6 +758,11 @@ def main():
         "btn-resume-en.svg": boton("Resume (EN)", False),
         "chip-codigo.svg": chip("CÓDIGO", "etiqueta"),
         "chip-credenciales.svg": chip("CREDENCIALES", "etiqueta"),
+        "chip-blandas.svg": chip("HABILIDADES BLANDAS", "etiqueta"),
+        "chip-blanda-equipo.svg": chip("Trabajo en equipo", "blanda"),
+        "chip-blanda-liderazgo.svg": chip("Liderazgo de pruebas", "blanda"),
+        "chip-blanda-autonomo.svg": chip("Aprendizaje autónomo", "blanda"),
+        "chip-blanda-usuario.svg": chip("Orientación al usuario", "blanda"),
         "chip-observatorio.svg": chip("Observatorio", "codigo"),
         "chip-cinex.svg": chip("CineX", "codigo"),
         "chip-numi.svg": chip("Numi", "codigo"),
