@@ -62,14 +62,8 @@ def tarjeta_movil(estado, color, titulo, linea1, linea2, accion, aria):
 
 
 def trayectoria_movil():
-    hitos = [
-        ("2023", "Ingeniería de Software", "Universidad Cooperativa"),
-        ("2025", "CineX v1.0 en equipo", "Java · Spring Boot · MySQL"),
-        ("2025", "C++ Essentials 1", "Cisco Networking Academy"),
-        ("2026", "Google Cloud", "4 insignias"),
-        ("2026", "Numi y Casa Rendón", "Flutter con IA · React"),
-        ("2026", "En producción", "CineX v2 · Observatorio"),
-    ]
+    from build import HITOS, TRAYECTORIA_ALT
+    hitos = HITOS
     W = 1000
     y0, paso = 190, 186
     H = y0 + paso * len(hitos) + 210
@@ -95,8 +89,7 @@ def trayectoria_movil():
               + via + est + meta
               + f'<g><g transform="translate({xv} 0)">{tren}</g>'
               + f'<animateTransform attributeName="transform" type="translate" values="0 {y0 - 60};0 {ym - 120};0 {ym - 120}" keyTimes="0;.85;1" dur="9s" repeatCount="indefinite"/></g>')
-    return documento(W, H, "Trayectoria: 2023 Ingeniería de Software; 2025 CineX v1.0 en equipo y C++ Essentials 1; 2026 cuatro insignias de Google Cloud, "
-                     "Numi, Casa Rendón, CineX v2 y el Observatorio de Salud. Siguiente: práctica empresarial.", cuerpo)
+    return documento(W, H, TRAYECTORIA_ALT, cuerpo)
 
 
 def stack_movil():

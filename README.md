@@ -32,7 +32,7 @@ Estudiante de Ingeniería de Software (VII semestre) en la Universidad Cooperati
   <a href="https://alexanderm-code.github.io/#proyectos"><img src="assets/readme/chip-portafolio.svg" height="34" alt="Capturas, video y mi rol en cada proyecto en el portafolio"></a>
 </p>
 
-<picture><source media="(max-width: 700px)" srcset="assets/readme/movil/trayectoria.svg"><img src="assets/readme/trayectoria.svg" width="100%" alt="Trayectoria: 2023 Ingeniería de Software; 2025 CineX v1.0 en equipo y C++ Essentials 1; 2026 cuatro insignias de Google Cloud, Numi, Casa Rendón, CineX v2.0 y el Observatorio de Salud. Siguiente: práctica empresarial."></picture>
+<picture><source media="(max-width: 700px)" srcset="assets/readme/movil/trayectoria.svg"><img src="assets/readme/trayectoria.svg" width="100%" alt="Trayectoria por semestres: 2023-2 Ingeniería de Software en la UCC; 2025-1 BlackJack Royale en equipo; 2025-2 Arduino y cerradura RFID, C++ Essentials 1 y CineX v1 en equipo; 2026-1 cuatro insignias de Google Cloud, Numi y Casa Rendón; 2026-2 diplomados en Java y JavaScript, CineX v2, el Observatorio de Salud y Datos con Python. Siguiente: práctica empresarial."></picture>
 
 <picture><source media="(max-width: 700px)" srcset="assets/readme/movil/stack.svg"><img src="assets/readme/stack.svg" width="100%" alt="Stack: Java, Spring Boot, Python, FastAPI, SQL, MySQL, pandas, Power BI, Looker Studio, Jupyter, HTML, CSS, JavaScript, React, Flutter, Dart, JUnit, pytest, Postman, Swagger, Docker, GitHub Actions y Git. Certificaciones de Google Cloud, Cisco y el Politécnico de Colombia. Aprendiendo ahora: AWS."></picture>
 

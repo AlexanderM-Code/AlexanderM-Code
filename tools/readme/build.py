@@ -377,16 +377,23 @@ def chip(texto, tipo="enlace"):
 # ======================================================================
 # 3. Trayectoria: línea del metro
 # ======================================================================
+# Hitos por semestre: los mismos de la trayectoria del portafolio
+HITOS = [
+    ("2023-2", "Ingeniería de Software", "UCC · Medellín"),
+    ("2025-1", "BlackJack Royale", "Primer proyecto en equipo"),
+    ("2025-2", "Arduino y CineX v1", "C++ Essentials 1 · en equipo"),
+    ("2026-1", "Google Cloud y Numi", "Casa Rendón · cliente real"),
+    ("2026-2", "Diplomados Java y JS", "CineX v2 · Observatorio · Datos"),
+]
+TRAYECTORIA_ALT = ("Trayectoria por semestres como una línea de metro: 2023-2 empiezo Ingeniería de Software en la UCC; "
+                   "2025-1 BlackJack Royale, primer proyecto en equipo; 2025-2 Arduino y cerradura RFID, C++ Essentials 1 y CineX v1 en equipo; "
+                   "2026-1 cuatro insignias de Google Cloud, Numi y Casa Rendón; 2026-2 diplomados en Java y JavaScript, CineX v2, "
+                   "el Observatorio de Salud y Datos con Python. Siguiente estación: práctica empresarial.")
+
+
 def trayectoria():
     W, H = 1000, 360
-    hitos = [
-        ("2023", "Ingeniería de Software", "Universidad Cooperativa"),
-        ("2025", "CineX v1.0 en equipo", "Java · Spring Boot · MySQL"),
-        ("2025", "C++ Essentials 1", "Cisco Networking Academy"),
-        ("2026", "Google Cloud", "4 insignias"),
-        ("2026", "Numi y Casa Rendón", "Flutter con IA · React"),
-        ("2026", "En producción", "CineX v2 · Observatorio"),
-    ]
+    hitos = HITOS
     yv = 196
     x0, x1, meta = 70, 790, 920
     paso = (x1 - x0) / (len(hitos) - 1)
@@ -397,19 +404,20 @@ def trayectoria():
     est = ""
     for k, (anio, t, s) in enumerate(hitos):
         x = round(x0 + k * paso)
-        arriba = k % 2 == 0
+        arriba = k % 2 == 1
         cy = 86 if arriba else 250
-        ancho = round(max(66 + len(t) * 7.9, 26 + len(s) * 6.7))
+        ancho = round(max(70 + len(t) * 7.6, 26 + len(s) * 6.7))
+        bx = min(x - 14, W - 26 - ancho)
         conector = (r(x - 2, cy + 50, 4, yv - 10 - (cy + 50), C["line2"], ' class="pix"') if arriba
                     else r(x - 2, yv + 14, 4, cy - (yv + 14), C["line2"], ' class="pix"'))
         est += (f'<g class="rise" style="animation-delay:{.2 + k * .25:.2f}s">' + conector
                 + marco(x - 12, yv - 10, 24, 24, C["ink"], C["cyan"], 3, False)
                 + r(x - 4, yv - 2, 8, 8, C["cyan"], ' class="pix"')
-                + marco(x - 14, cy, ancho, 50, "#0b1f2a", C["line2"], 3, True)
-                + r(x - 11, cy + 3, 4, 44, C["amber"], ' class="pix"')
-                + f'<text x="{x + 2}" y="{cy + 20}" class="px" font-size="16" fill="{C["amber"]}">{anio}</text>'
-                + f'<text x="{x + 50}" y="{cy + 20}" class="sgb" font-size="13" fill="{C["ink"]}">{e(t)}</text>'
-                + f'<text x="{x + 2}" y="{cy + 38}" class="mono" font-size="10.5" fill="{C["ink3"]}">{e(s)}</text></g>')
+                + marco(bx, cy, ancho, 50, "#0b1f2a", C["line2"], 3, True)
+                + r(bx + 3, cy + 3, 4, 44, C["amber"], ' class="pix"')
+                + f'<text x="{bx + 16}" y="{cy + 20}" class="px" font-size="16" fill="{C["amber"]}">{anio}</text>'
+                + f'<text x="{bx + 74}" y="{cy + 20}" class="sgb" font-size="13" fill="{C["ink"]}">{e(t)}</text>'
+                + f'<text x="{bx + 16}" y="{cy + 38}" class="mono" font-size="10.5" fill="{C["ink3"]}">{e(s)}</text></g>')
     tren = ('<g class="pix">' + r(0, 0, 76, 26, "#e8eef0") + r(0, 18, 76, 4, C["green"]) + r(70, 4, 6, 14, "#c7d2d6")
             + "".join(r(8 + k * 16, 5, 10, 9, C["cyan"]) for k in range(4)) + r(-4, 26, 84, 4, "#33424a")
             + r(8, 30, 8, 4, "#111") + r(60, 30, 8, 4, "#111") + "</g>")
@@ -423,9 +431,7 @@ def trayectoria():
               + f'<text x="{meta}" y="94" text-anchor="middle" class="px" font-size="16" fill="{C["amber"]}">SIGUIENTE</text>'
               + f'<text x="{meta}" y="117" text-anchor="middle" class="px" font-size="16" fill="{C["ink"]}">PRÁCTICA</text>'
               + marco(meta - 12, yv - 10, 24, 24, C["amber"], C["amber2"], 3, False) + "</g>")
-    return documento(W, H, "Trayectoria como una línea de metro: 2023 Ingeniería de Software; 2025 CineX v1.0 en equipo y C++ Essentials 1; "
-                     "2026 cuatro insignias de Google Cloud, Numi, Casa Rendón, CineX v2 y el Observatorio de Salud. Siguiente estación: práctica empresarial.",
-                     cuerpo)
+    return documento(W, H, TRAYECTORIA_ALT, cuerpo)
 
 
 # ======================================================================
