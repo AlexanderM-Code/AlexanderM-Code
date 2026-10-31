@@ -13,7 +13,7 @@ Estudiante de Ingeniería de Software (VII semestre) en la Universidad Cooperati
 
 <p>
   <a href="https://alexanderm-code.github.io/observatorio-salud-antioquia/"><picture><source media="(max-width: 700px)" srcset="assets/readme/movil/proyecto-observatorio.svg"><img src="assets/readme/proyecto-observatorio.svg" width="49%" alt="Observatorio de Salud Pública de Antioquia, en vivo: pipeline en Python y SQL sobre 1,18 millones de casos del SIVIGILA."></picture></a>
-  <a href="https://cinex-api-lt2q.onrender.com/swagger-ui/index.html"><picture><source media="(max-width: 700px)" srcset="assets/readme/movil/proyecto-cinex.svg"><img src="assets/readme/proyecto-cinex.svg" width="49%" alt="CineX, en vivo: API REST en Java con Spring Boot y MySQL, con reglas de negocio y 17 pruebas."></picture></a>
+  <a href="https://cinex-api-lt2q.onrender.com/swagger-ui/index.html"><picture><source media="(max-width: 700px)" srcset="assets/readme/movil/proyecto-cinex.svg"><img src="assets/readme/proyecto-cinex.svg" width="49%" alt="CineX, en vivo: API REST en Java con Spring Boot y MySQL, con reglas de negocio y 19 pruebas."></picture></a>
   <a href="https://alexanderm-code.github.io/#proyectos"><picture><source media="(max-width: 700px)" srcset="assets/readme/movil/proyecto-numi.svg"><img src="assets/readme/proyecto-numi.svg" width="49%" alt="Numi, en desarrollo: app educativa en Flutter con IA que funciona sin internet."></picture></a>
   <a href="https://casarendon.com"><picture><source media="(max-width: 700px)" srcset="assets/readme/movil/proyecto-casa-rendon.svg"><img src="assets/readme/proyecto-casa-rendon.svg" width="49%" alt="Casa Rendón, cliente real en producción: sitio web en React."></picture></a>
 </p>

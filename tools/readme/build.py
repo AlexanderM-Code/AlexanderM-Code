@@ -486,10 +486,10 @@ def proyecto_cinex():
         vis += (f'<text class="mono rise" style="animation-delay:{.3 + k * .4:.2f}s" x="40" y="{156 + k * 25}" font-size="12.5" fill="{c2}">'
                 f'<tspan fill="{c1}">{e(p)}</tspan>{e(t)}</text>')
     return tarjeta("EN VIVO", C["green"], "equipo · v2.0 individual", "CineX",
-                   "API REST en Spring Boot con reglas de negocio y 17 pruebas", vis,
+                   "API REST en Spring Boot con reglas de negocio y 19 pruebas", vis,
                    "Java 21 · Spring Boot · MySQL · JUnit · Docker", "probar la API",
                    "CineX, en vivo: API REST en Java con Spring Boot y MySQL. Ejemplo: al pedir 3 sillas cuando quedan 2, responde 409. "
-                   "17 pruebas automáticas. Versión 1.0 en equipo, versión 2.0 individual.")
+                   "19 pruebas automáticas. Versión 1.0 en equipo, versión 2.0 individual.")
 
 
 AVION = """
@@ -572,7 +572,7 @@ HERRAMIENTAS = [
         ("flutter", "Flutter", "app con IA que funciona sin internet", "Numi"),
     ]),
     ("CALIDAD Y DEVOPS", [
-        ("junit5", "JUnit · Mockito", "17 pruebas de la API", "CineX"),
+        ("junit5", "JUnit · Mockito", "19 pruebas de la API", "CineX"),
         ("pytest", "pytest", "pruebas del pipeline y la API", "Observatorio"),
         ("githubactions", "GitHub Actions", "CI y datos actualizados cada mes", "CineX · Observatorio"),
         ("docker", "Docker", "todo el entorno con un comando", "CineX · Observatorio"),
@@ -624,7 +624,7 @@ def stack():
                 + r(938, yy + 22, 4, 4, C["green"], ' class="pix"') + r(942, yy + 26, 4, 4, C["green"], ' class="pix"')
                 + r(946, yy + 22, 4, 4, C["green"], ' class="pix"') + r(950, yy + 18, 4, 4, C["green"], ' class="pix"')
                 + r(954, yy + 14, 4, 4, C["green"], ' class="pix"') + "</g>")
-    stats = [("PRUEBAS", "17"), ("SOLICITUDES", "26"), ("CASOS", "1,18 M")]
+    stats = [("PRUEBAS", "19"), ("SOLICITUDES", "26"), ("CASOS", "1,18 M")]
     nums = ""
     for k, (a, b) in enumerate(stats):
         x = 640 + k * 112
@@ -648,7 +648,7 @@ def stack():
               + nums)
     return documento(W, H, "Inventario: " + "; ".join(f"{n}: {u} ({d})" for _, it in HERRAMIENTAS for _, n, u, d in it) + ". Insignias: Google Cloud Implementing Cloud Load Balancing for Compute Engine, "
                      "Set Up an App Dev Environment, dos Google Cloud Computing Foundations, C++ Essentials 1 de Cisco y diplomados en Java y JavaScript del Politécnico de Colombia. "
-                     "17 pruebas, 26 solicitudes de Postman y 1,18 millones de casos analizados. Aprendiendo ahora: AWS, análisis de datos con Python y un tablero en Power BI del Observatorio.",
+                     "19 pruebas, 26 solicitudes de Postman y 1,18 millones de casos analizados. Aprendiendo ahora: AWS, análisis de datos con Python y un tablero en Power BI del Observatorio.",
                      cuerpo)
 
 

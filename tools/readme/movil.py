@@ -135,7 +135,7 @@ def stack_movil():
                 + f'<text x="180" y="{y + 98}" class="mono" font-size="26" fill="{C["ink3"]}">{e(d)}</text>')
         y += 140
     y += 30
-    for k, (a, b) in enumerate([("PRUEBAS", "17"), ("SOLICITUDES", "26"), ("CASOS", "1,18 M")]):
+    for k, (a, b) in enumerate([("PRUEBAS", "19"), ("SOLICITUDES", "26"), ("CASOS", "1,18 M")]):
         x = 48 + k * 310
         out += (f'<text x="{x}" y="{y}" class="mono" font-size="26" fill="{C["ink3"]}">{e(a)}</text>'
                 f'<text x="{x}" y="{y + 64}" class="px" font-size="64" fill="{C["amber"]}">{e(b)}</text>')
@@ -197,8 +197,8 @@ def generar():
         "movil/portada.svg": portada_movil(),
         "movil/proyecto-observatorio.svg": tarjeta_movil("EN VIVO", C["green"], "OBSERVATORIO", "1,18 M casos de salud", "Python · SQL · MySQL", "VER EN VIVO",
                                                          "Observatorio de Salud Pública de Antioquia, en vivo."),
-        "movil/proyecto-cinex.svg": tarjeta_movil("EN VIVO", C["green"], "CINEX", "API en Spring Boot", "17 pruebas · MySQL", "PROBAR API",
-                                                  "CineX, en vivo: API REST en Spring Boot con 17 pruebas."),
+        "movil/proyecto-cinex.svg": tarjeta_movil("EN VIVO", C["green"], "CINEX", "API en Spring Boot", "19 pruebas · MySQL", "PROBAR API",
+                                                  "CineX, en vivo: API REST en Spring Boot con 19 pruebas."),
         "movil/proyecto-numi.svg": tarjeta_movil("EN DESARROLLO", C["cyan"], "NUMI", "App con IA sin internet", "Flutter · equipo", "VER DETALLES",
                                                  "Numi, en desarrollo: app educativa con IA que funciona sin internet."),
         "movil/proyecto-casa-rendon.svg": tarjeta_movil("CLIENTE REAL", C["amber"], "CASA RENDÓN", "Sitio en producción", "React · equipo", "VISITAR",
