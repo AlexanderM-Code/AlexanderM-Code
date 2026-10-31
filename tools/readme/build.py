@@ -306,13 +306,6 @@ def titulo_panel(x, y, titulo, sub="", derecha="", ancho=930):
 def portada():
     W, H = 1000, 470
     suelo = 372
-    hud = ""
-    estado = [("API de CineX", "Render + MySQL"), ("Observatorio", "GitHub Pages"), ("casarendon.com", "cliente real")]
-    for k, (n, d) in enumerate(estado):
-        y = 86 + k * 28
-        hud += (led(718, y - 9, C["green"], 8, k * .4)
-                + f'<text x="734" y="{y}" class="sgb" font-size="13.5" fill="{C["ink"]}">{e(n)}</text>'
-                + f'<text x="950" y="{y}" text-anchor="end" class="mono" font-size="10.5" fill="{C["ink3"]}">{e(d)}</text>')
     celdas = [("UBICACIÓN", "Medellín, Colombia"), ("FORMACIÓN", "Ingeniería de Software · VII"),
               ("PRÁCTICA", "Disponible desde ya"), ("MODALIDAD", "Presencial, híbrida o remota")]
     datos = "".join(
@@ -322,7 +315,7 @@ def portada():
     luna = ('<g class="pix">' + r(612, 44, 24, 8, "#fff2c9") + r(604, 52, 40, 24, "#fff2c9") + r(612, 76, 24, 8, "#fff2c9")
             + r(620, 56, 8, 8, "#f2dca0") + r(628, 68, 6, 6, "#f2dca0") + "</g>")
     cuerpo = (cielo(W, suelo)
-              + estrellas(W, 200, 46, (690, 26, 975, 175), (30, 40, 690, 260))
+              + estrellas(W, 200, 46, (590, 30, 660, 95), (30, 40, 690, 260))
               + luna
               + montanas(W, suelo - 40, 140, C["mont1"], 20, 3)
               + montanas(W, suelo - 20, 90, C["mont2"], 16, 11)
@@ -341,16 +334,11 @@ def portada():
               + f'<g class="rise" style="animation-delay:.5s"><text x="46" y="200" class="sg" font-size="17" fill="{C["ink"]}">Estudiante de Ingeniería de Software · Universidad Cooperativa de Colombia</text></g>'
               + '<g class="rise" style="animation-delay:.7s">' + marco(44, 214, 432, 38, "#0b1f2a", C["green"], 4, True)
               + led(62, 229, C["green"], 8) + f'<text x="80" y="238" class="sgb" font-size="15" fill="{C["ink"]}">Disponible desde ya para práctica empresarial</text></g>'
-              # HUD de estado
-              + marco(700, 30, 266, 138, "#0b1f2a", C["line2"], 4, True)
-              + f'<text x="718" y="56" class="px" font-size="16" fill="{C["cyan"]}" letter-spacing="1">EN LÍNEA</text>'
-              + f'<text x="950" y="56" text-anchor="end" class="mono" font-size="10.5" fill="{C["ink3"]}">UptimeRobot · 5 min</text>'
-              + hud
               # Alexander
               + f'<g class="bob">{sprite(ALEX, PALETA_ALEX, 880, suelo - 21 * 5, 5)}</g>'
               + datos)
     return documento(W, H, "Alexander Mejía Ospina, estudiante de Ingeniería de Software en la Universidad Cooperativa de Colombia, Medellín. "
-                     "Disponible desde ya para práctica empresarial, presencial, híbrida o remota. En línea: API de CineX, Observatorio de Salud y casarendon.com.",
+                     "Disponible desde ya para práctica empresarial, presencial, híbrida o remota.",
                      cuerpo)
 
 
@@ -674,6 +662,30 @@ def contribuciones():
     return documento(W, H, "Contribuciones: mi actividad real del último año en GitHub.", cuerpo)
 
 
+# ======================================================================
+# Estado de los proyectos en línea
+# ======================================================================
+SERVICIOS = [("API de CineX", "Render + TiDB · cada 5 min"),
+             ("Observatorio", "GitHub Pages · datos mensuales"),
+             ("casarendon.com", "cliente real · en producción")]
+
+
+def en_linea():
+    W, H = 1000, 132
+    filas = ""
+    for k, (n, d) in enumerate(SERVICIOS):
+        x = 34 + k * 318
+        filas += (led(x, 82, C["green"], 10, k * .4)
+                  + f'<text x="{x + 20}" y="92" class="sgb" font-size="16" fill="{C["ink"]}">{e(n)}</text>'
+                  + f'<text x="{x + 20}" y="112" class="mono" font-size="11" fill="{C["ink3"]}">{e(d)}</text>')
+    cuerpo = (panel(W, H)
+              + f'<text x="32" y="50" class="px" font-size="24" fill="{C["cyan"]}" letter-spacing="1">EN LÍNEA</text>'
+              + f'<text x="200" y="48" class="sg" font-size="14.5" fill="{C["ink2"]}">Mis proyectos funcionando ahora, vigilados por UptimeRobot</text>'
+              + filas)
+    return documento(W, H, "En línea: API de CineX en Render con TiDB, Observatorio de Salud en GitHub Pages y casarendon.com, "
+                     "un cliente real en producción. Vigilados por UptimeRobot.", cuerpo)
+
+
 def cierre():
     W, H = 1000, 290
     suelo = 244
@@ -728,6 +740,7 @@ def main():
         "proyecto-numi.svg": proyecto_numi(),
         "proyecto-casa-rendon.svg": proyecto_casa(),
         "stack.svg": stack(),
+        "en-linea.svg": en_linea(),
         "cierre.svg": cierre(),
     }
     import movil

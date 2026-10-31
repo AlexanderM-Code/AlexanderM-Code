@@ -49,4 +49,6 @@ Estudiante de Ingeniería de Software (VII semestre) en la Universidad Cooperati
   <img src="https://raw.githubusercontent.com/AlexanderM-Code/AlexanderM-Code/output/contribuciones.svg" width="100%" alt="Mis contribuciones del último año en GitHub dibujadas como un edificio de Medellín de noche: cada ventana encendida es un día que programé. Se actualiza todos los días.">
 </picture>
 
+<a href="https://alexanderm-code.github.io/#contacto"><picture><source media="(max-width: 700px)" srcset="assets/readme/movil/en-linea.svg"><img src="assets/readme/en-linea.svg" width="100%" alt="En línea: API de CineX en Render con TiDB, Observatorio de Salud en GitHub Pages y casarendon.com, un cliente real en producción. Vigilados por UptimeRobot."></picture></a>
+
 <a href="mailto:alexmejia0112@gmail.com"><picture><source media="(max-width: 700px)" srcset="assets/readme/movil/cierre.svg"><img src="assets/readme/cierre.svg" width="100%" alt="¿Tu equipo necesita un practicante? Desarrollo de software o análisis de datos, disponible desde ya. alexmejia0112@gmail.com"></picture></a>

@@ -8,19 +8,13 @@ en formato vertical y con letra grande. El README las elige con
 import random
 
 from build import (ALEX, ALEX_SALUDO, C, PALETA_ALEX, cielo, comuna, documento, e, edificios, estrellas, icono,
-                   icono_custom, led, marco, metrocable, montanas, panel, r, sprite)
+                   icono_custom, led, marco, SERVICIOS, metrocable, montanas, panel, r, sprite)
 
 
 def portada_movil():
-    W, H = 1000, 1360
-    suelo = 1080
+    W, H = 1000, 1060
+    suelo = 780
     random.seed(17)
-    filas = ""
-    for k, (n, d) in enumerate([("API de CineX", "Render"), ("Observatorio", "GitHub Pages"), ("casarendon.com", "cliente real")]):
-        y = 676 + k * 62
-        filas += (led(96, y - 22, C["green"], 20, k * .4)
-                  + f'<text x="134" y="{y}" class="sgb" font-size="36" fill="{C["ink"]}">{e(n)}</text>'
-                  + f'<text x="900" y="{y}" text-anchor="end" class="mono" font-size="26" fill="{C["ink3"]}">{e(d)}</text>')
     celdas = [("UBICACIÓN", "Medellín"), ("FORMACIÓN", "Ing. de Software · VII"),
               ("PRÁCTICA", "Disponible desde ya"), ("MODALIDAD", "Presencial o remota")]
     datos = ""
@@ -30,12 +24,12 @@ def portada_movil():
         datos += (f'<text x="{x}" y="{y}" class="px" font-size="32" fill="{C["amber"]}">{e(a)}</text>'
                   f'<text x="{x}" y="{y + 46}" class="sg" font-size="34" fill="{C["ink"]}">{e(b)}</text>')
     cuerpo = (cielo(W, suelo)
-              + estrellas(W, 560, 40, (40, 40, 960, 560))
+              + estrellas(W, 560, 40, (40, 40, 960, 520))
               + montanas(W, suelo - 120, 220, C["mont1"], 28, 3)
               + montanas(W, suelo - 60, 150, C["mont2"], 24, 11)
               + comuna(0, 420, suelo - 90, 5)
               + comuna(600, 1000, suelo - 80, 9)
-              + metrocable(90, 900, 640, 960, 3, 16)
+              + metrocable(90, 600, 640, 660, 3, 16)
               + edificios(360, 700, suelo, 21)
               + r(0, suelo, W, H - suelo, C["ground"], ' class="pix"') + r(0, suelo, W, 8, C["grass"], ' class="pix"')
               + f'<text x="68" y="166" class="px" font-size="104" fill="#030a14" opacity=".7">ALEXANDER</text>'
@@ -47,14 +41,10 @@ def portada_movil():
               + marco(60, 440, 880, 84, "#0b1f2a", C["green"], 6, True)
               + led(96, 472, C["green"], 20)
               + f'<text x="134" y="494" class="sgb" font-size="36" fill="{C["ink"]}">Disponible desde ya para práctica</text>'
-              + marco(60, 570, 880, 290, "#0b1f2a", C["line2"], 6, True)
-              + f'<text x="96" y="626" class="px" font-size="40" fill="{C["cyan"]}">EN LÍNEA</text>'
-              + f'<text x="900" y="624" text-anchor="end" class="mono" font-size="24" fill="{C["ink3"]}">UptimeRobot · 5 min</text>'
-              + filas
               + f'<g class="bob">{sprite(ALEX, PALETA_ALEX, 790, suelo - 21 * 9, 9)}</g>'
               + datos)
     return documento(W, H, "Alexander Mejía Ospina, estudiante de Ingeniería de Software en la Universidad Cooperativa de Colombia, Medellín. "
-                     "Disponible desde ya para práctica empresarial. En línea: API de CineX, Observatorio de Salud y casarendon.com.", cuerpo)
+                     "Disponible desde ya para práctica empresarial.", cuerpo)
 
 
 def tarjeta_movil(estado, color, titulo, linea1, linea2, accion, aria):
@@ -164,6 +154,21 @@ def contribuciones_movil():
     return documento(W, H, "Contribuciones: mi actividad real del último año en GitHub.", cuerpo)
 
 
+def en_linea_movil():
+    W, H = 1000, 540
+    filas = ""
+    for k, (n, d) in enumerate(SERVICIOS):
+        y = 240 + k * 100
+        filas += (led(56, y - 26, C["green"], 22, k * .4)
+                  + f'<text x="98" y="{y}" class="sgb" font-size="38" fill="{C["ink"]}">{e(n)}</text>'
+                  + f'<text x="98" y="{y + 34}" class="mono" font-size="24" fill="{C["ink3"]}">{e(d)}</text>')
+    cuerpo = (panel(W, H)
+              + f'<text x="48" y="96" class="px" font-size="56" fill="{C["cyan"]}">EN LÍNEA</text>'
+              + f'<text x="48" y="150" class="sg" font-size="32" fill="{C["ink2"]}">Mis proyectos funcionando ahora</text>'
+              + filas)
+    return documento(W, H, "En línea: API de CineX, Observatorio de Salud y casarendon.com, vigilados por UptimeRobot.", cuerpo)
+
+
 def cierre_movil():
     W, H = 1000, 1080
     suelo = 960
@@ -200,5 +205,6 @@ def generar():
                                                         "Casa Rendón, cliente real: sitio web en React en producción."),
         "movil/trayectoria.svg": trayectoria_movil(),
         "movil/stack.svg": stack_movil(),
+        "movil/en-linea.svg": en_linea_movil(),
         "movil/cierre.svg": cierre_movil(),
     }
