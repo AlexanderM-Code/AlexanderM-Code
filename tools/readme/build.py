@@ -599,7 +599,7 @@ HERRAMIENTAS = [
         ("sql", "SQL", "CTE, ventanas y canal endémico", "Observatorio"),
         ("mysql", "MySQL", "modelo estrella y esquema de la API", "Observatorio · CineX"),
         ("pandas", "pandas", "limpieza y validación de datos", "Observatorio"),
-        ("powerbi", "Power BI · Looker", "tableros de datos en clase", "Académico"),
+        ("powerbi", "Power BI · Looker", "tablero público con filtros", "Observatorio"),
     ]),
     ("WEB Y MÓVIL", [
         ("react", "React", "componentes del sitio de un cliente", "Casa Rendón"),
