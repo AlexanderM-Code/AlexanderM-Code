@@ -36,6 +36,7 @@ Estudiante de Ingeniería de Software (VII semestre) en la Universidad Cooperati
   <a href="https://github.com/AlexanderM-Code/sistema-eventos-academicos"><img src="assets/readme/chip-eventos.svg" height="34" alt="Código de Eventos académicos"></a>
   <a href="https://github.com/AlexanderM-Code/Computacion-Ubicua"><img src="assets/readme/chip-arduino.svg" height="34" alt="Código de Arduino y cerradura RFID"></a>
   <a href="https://github.com/luism7p7/BlackJack"><img src="assets/readme/chip-blackjack.svg" height="34" alt="Código de BlackJack, proyecto en equipo"></a>
+  <a href="https://github.com/AlexanderM-Code/analisis-datos-python"><img src="assets/readme/chip-datos.svg" height="34" alt="Código de Datos con Python: 23 laboratorios de analítica de datos"></a>
   <br>
   <a href="https://alexanderm-code.github.io/#proyectos"><img src="assets/readme/chip-portafolio.svg" height="34" alt="Capturas, video y mi rol en cada proyecto en el portafolio"></a>
 </p>
