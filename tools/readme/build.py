@@ -385,7 +385,7 @@ HITOS = [
     ("2025-1", "BlackJack Royale", [("primer proyecto", "e")]),
     ("2025-2", "Arduino y CineX v1", [("C++ y laboratorios", "i"), ("RFID · CineX", "e")]),
     ("2026-1", "Google Cloud y Numi", [("4 insignias", "i"), ("Numi · Casa Rendón", "e")]),
-    ("2026-2", "Diplomados Java y JS", [("CineX v2 · Observatorio · Datos", "i")]),
+    ("2026-2", "Datos y proyecto de grado", [("CineX v2 · Observatorio", "i"), ("Paneles · Grado", "e")]),
 ]
 GRADO = "2027-1"
 MARCA = {"i": "green", "e": "cyan"}
@@ -408,7 +408,7 @@ def detalle_ancho(items, cuadro=7, ancho_letra=6.35, sep=10):
 TRAYECTORIA_ALT = ("Trayectoria por semestres como una línea de metro: 2023-2 empiezo Ingeniería de Software en la UCC; "
                    "2025-1 BlackJack Royale, primer proyecto en equipo; 2025-2 Arduino y cerradura RFID, C++ Essentials 1 y CineX v1 en equipo; "
                    "2026-1 cuatro insignias de Google Cloud, Numi y Casa Rendón; 2026-2 diplomados en Java y JavaScript, CineX v2, "
-                   "el Observatorio de Salud y Datos con Python. Siguiente estación: práctica empresarial. Grado previsto: 2027-1. "
+                   "el Observatorio de Salud con su tablero en Power BI, Datos con Python, los paneles web de Numi y el anteproyecto del proyecto de grado, en equipo. Siguiente estación: práctica empresarial. Grado previsto: 2027-1. "
                    "Cada proyecto está marcado como individual (verde) o en equipo (azul).")
 
 
@@ -668,11 +668,11 @@ def stack():
     der += (marco(640, 492, 326, 126, "#101217", C["amber"], 3, False)
             + f'<text x="658" y="520" class="px" font-size="16" fill="{C["amber"]}" letter-spacing="1">APRENDIENDO AHORA</text>'
             + led(658, 538, C["amber"], 8)
-            + f'<text x="676" y="546" class="sg" font-size="13.5" fill="{C["ink"]}">AWS: servicios en la nube</text>'
+            + f'<text x="676" y="546" class="sg" font-size="13.5" fill="{C["ink"]}">AWS Academy Cloud Foundations</text>'
             + led(658, 562, C["amber"], 8, .4)
-            + f'<text x="676" y="570" class="sg" font-size="13.5" fill="{C["ink"]}">Análisis de datos con Python</text>'
+            + f'<text x="676" y="570" class="sg" font-size="13.5" fill="{C["ink"]}">Proyecto de grado: requisitos</text>'
             + led(658, 586, C["amber"], 8, .8)
-            + f'<text x="676" y="594" class="sg" font-size="13.5" fill="{C["ink"]}">Tablero en Power BI del Observatorio</text>')
+            + f'<text x="676" y="594" class="sg" font-size="13.5" fill="{C["ink"]}">Power BI y DAX</text>')
     cuerpo = (panel(W, H)
               + titulo_panel(32, 50, "INVENTARIO", "qué uso, para qué y dónde", "", 560)
               + r(612, 30, 4, H - 64, C["line"], ' class="pix"')
@@ -683,7 +683,7 @@ def stack():
               + nums)
     return documento(W, H, "Inventario: " + "; ".join(f"{n}: {u} ({d})" for _, it in HERRAMIENTAS for _, n, u, d in it) + ". Insignias: Google Cloud Implementing Cloud Load Balancing for Compute Engine, "
                      "Set Up an App Dev Environment, dos Google Cloud Computing Foundations, C++ Essentials 1 de Cisco y diplomados en Java y JavaScript del Politécnico de Colombia. "
-                     "19 pruebas, 26 solicitudes de Postman y 1,18 millones de casos analizados. Aprendiendo ahora: AWS, análisis de datos con Python y un tablero en Power BI del Observatorio.",
+                     "19 pruebas, 26 solicitudes de Postman y 1,18 millones de casos analizados. Aprendiendo ahora: AWS Academy Cloud Foundations, los requisitos del proyecto de grado y Power BI con DAX.",
                      cuerpo)
 
 

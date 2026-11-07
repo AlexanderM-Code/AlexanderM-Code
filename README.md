@@ -9,7 +9,7 @@
   <a href="https://alexanderm-code.github.io/cv/Resume_Alexander_Mejia_Ospina_EN.pdf"><img src="assets/readme/btn-resume-en.svg" height="44" alt="Resume in English (PDF)"></a>
 </p>
 
-Estudiante de Ingeniería de Software (VII semestre) en la Universidad Cooperativa de Colombia, Medellín. Construyo **APIs con Java y Spring Boot**, **pipelines y análisis de datos con Python y SQL** y **sitios web con React**, con pruebas automáticas y desplegados en producción. Busco mi **práctica empresarial en desarrollo de software o análisis de datos**, disponible desde ya. Termino la carrera en **2027-1**.
+Estudiante de Ingeniería de Software (VII semestre) en la Universidad Cooperativa de Colombia, Medellín. Construyo **APIs con Java y Spring Boot**, **pipelines y análisis de datos con Python y SQL** y **sitios web con React**, con pruebas automáticas y desplegados en producción. Mi proyecto de grado es un **aplicativo web de historias clínicas** para el Técnico Auxiliar en Salud Oral de la UCC. Busco mi **práctica empresarial en desarrollo de software o análisis de datos**, disponible desde ya. Termino la carrera en **2027-1**.
 
 <p align="center">
   <img src="assets/readme/chip-blandas.svg" height="34" alt="Habilidades blandas:">
@@ -41,9 +41,9 @@ Estudiante de Ingeniería de Software (VII semestre) en la Universidad Cooperati
   <a href="https://alexanderm-code.github.io/#proyectos"><img src="assets/readme/chip-portafolio.svg" height="34" alt="Capturas, video y mi rol en cada proyecto en el portafolio"></a>
 </p>
 
-<picture><source media="(max-width: 700px)" srcset="assets/readme/movil/trayectoria.svg"><img src="assets/readme/trayectoria.svg" width="100%" alt="Trayectoria por semestres: 2023-2 Ingeniería de Software en la UCC; 2025-1 BlackJack Royale en equipo; 2025-2 Arduino y cerradura RFID, C++ Essentials 1 y CineX v1 en equipo; 2026-1 cuatro insignias de Google Cloud, Numi y Casa Rendón; 2026-2 diplomados en Java y JavaScript, CineX v2, el Observatorio de Salud y Datos con Python. Siguiente: práctica empresarial. Grado previsto: 2027-1. Cada proyecto está marcado como individual o en equipo."></picture>
+<picture><source media="(max-width: 700px)" srcset="assets/readme/movil/trayectoria.svg"><img src="assets/readme/trayectoria.svg" width="100%" alt="Trayectoria por semestres: 2023-2 Ingeniería de Software en la UCC; 2025-1 BlackJack Royale en equipo; 2025-2 Arduino y cerradura RFID, C++ Essentials 1 y CineX v1 en equipo; 2026-1 cuatro insignias de Google Cloud, Numi y Casa Rendón; 2026-2 diplomados en Java y JavaScript, CineX v2, el Observatorio de Salud con su tablero en Power BI, Datos con Python, los paneles web de Numi y el anteproyecto del proyecto de grado. Siguiente: práctica empresarial. Grado previsto: 2027-1. Cada proyecto está marcado como individual o en equipo."></picture>
 
-<picture><source media="(max-width: 700px)" srcset="assets/readme/movil/stack.svg"><img src="assets/readme/stack.svg" width="100%" alt="Stack: Java, Spring Boot, Python, FastAPI, SQL, MySQL, pandas, Power BI, Looker Studio, Jupyter, HTML, CSS, JavaScript, React, Flutter, Dart, JUnit, pytest, Postman, Swagger, Docker, GitHub Actions y Git. Certificaciones de Google Cloud, Cisco y el Politécnico de Colombia. Aprendiendo ahora: AWS."></picture>
+<picture><source media="(max-width: 700px)" srcset="assets/readme/movil/stack.svg"><img src="assets/readme/stack.svg" width="100%" alt="Stack: Java, Spring Boot, Python, FastAPI, SQL, MySQL, pandas, Power BI, Looker Studio, Jupyter, HTML, CSS, JavaScript, React, Flutter, Dart, JUnit, pytest, Postman, Swagger, Docker, GitHub Actions y Git. Certificaciones de Google Cloud, Cisco y el Politécnico de Colombia. Aprendiendo ahora: AWS Academy Cloud Foundations, los requisitos del proyecto de grado y Power BI con DAX."></picture>
 
 <p align="center">
   <img src="assets/readme/chip-credenciales.svg" height="34" alt="Credenciales:">
