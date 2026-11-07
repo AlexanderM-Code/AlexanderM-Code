@@ -22,8 +22,10 @@ Estudiante de Ingeniería de Software (VII semestre) en la Universidad Cooperati
 <p>
   <a href="https://alexanderm-code.github.io/observatorio-salud-antioquia/"><picture><source media="(max-width: 700px)" srcset="assets/readme/movil/proyecto-observatorio.svg"><img src="assets/readme/proyecto-observatorio.svg" width="49%" alt="Observatorio de Salud Pública de Antioquia, en vivo: pipeline en Python y SQL sobre 1,18 millones de casos del SIVIGILA. Mi rol: todo el proyecto."></picture></a>
   <a href="https://cinex-api-lt2q.onrender.com/swagger-ui/index.html"><picture><source media="(max-width: 700px)" srcset="assets/readme/movil/proyecto-cinex.svg"><img src="assets/readme/proyecto-cinex.svg" width="49%" alt="CineX, en vivo: API REST en Java con Spring Boot y MySQL, con reglas de negocio y 19 pruebas. Mi rol: integración en la v1.0 en equipo y toda la v2.0."></picture></a>
-  <a href="https://alexanderm-code.github.io/#proyectos"><picture><source media="(max-width: 700px)" srcset="assets/readme/movil/proyecto-numi.svg"><img src="assets/readme/proyecto-numi.svg" width="49%" alt="Numi, en desarrollo: app educativa en Flutter con IA que funciona sin internet. Mi rol: arquitectura, RAG offline y pantallas de Ciencias Naturales."></picture></a>
+  <a href="https://alexanderm-code.github.io/#numi"><picture><source media="(max-width: 700px)" srcset="assets/readme/movil/proyecto-numi.svg"><img src="assets/readme/proyecto-numi.svg" width="49%" alt="Numi, en desarrollo: app educativa en Flutter con IA que funciona sin internet. Mi rol: arquitectura, RAG offline y pantallas de Ciencias Naturales."></picture></a>
   <a href="https://casarendon.com"><picture><source media="(max-width: 700px)" srcset="assets/readme/movil/proyecto-casa-rendon.svg"><img src="assets/readme/proyecto-casa-rendon.svg" width="49%" alt="Casa Rendón, cliente real en producción: sitio web en React. Mi rol: diseño y desarrollo del sitio."></picture></a>
+  <a href="https://alexanderm-code.github.io/#paneles-numi"><picture><source media="(max-width: 700px)" srcset="assets/readme/movil/proyecto-paneles.svg"><img src="assets/readme/proyecto-paneles.svg" width="49%" alt="Paneles de Numi, en desarrollo: panel administrativo y docente en Flask y MySQL conectados con la app, con 110 pruebas. Mi rol: los dos paneles con Luis Miguel Muñoz."></picture></a>
+  <a href="https://alexanderm-code.github.io/#proyecto-de-grado"><picture><source media="(max-width: 700px)" srcset="assets/readme/movil/proyecto-grado.svg"><img src="assets/readme/proyecto-grado.svg" width="49%" alt="Proyecto de grado, en documentación: aplicativo web de historias clínicas para el Técnico Auxiliar en Salud Oral. Mi rol: coautor del anteproyecto y de los requisitos."></picture></a>
 </p>
 
 <p align="center">
@@ -31,6 +33,7 @@ Estudiante de Ingeniería de Software (VII semestre) en la Universidad Cooperati
   <a href="https://github.com/AlexanderM-Code/observatorio-salud-antioquia"><img src="assets/readme/chip-observatorio.svg" height="34" alt="Código del Observatorio"></a>
   <a href="https://github.com/AlexanderM-Code/CineX---Proyecto-Final"><img src="assets/readme/chip-cinex.svg" height="34" alt="Código de CineX"></a>
   <a href="https://github.com/geminitodo5-sketch/app-educativa-medellin"><img src="assets/readme/chip-numi.svg" height="34" alt="Código de Numi"></a>
+  <a href="https://github.com/luism7p7/numi-paneles-roles"><img src="assets/readme/chip-paneles.svg" height="34" alt="Código de los Paneles de Numi, proyecto en equipo"></a>
   <a href="https://github.com/AlexanderM-Code/Entre-sorbos---Casa-Rendon"><img src="assets/readme/chip-casa-rendon.svg" height="34" alt="Código de Casa Rendón"></a>
   <br>
   <a href="https://github.com/AlexanderM-Code/sistema-eventos-academicos"><img src="assets/readme/chip-eventos.svg" height="34" alt="Código de Eventos académicos"></a>

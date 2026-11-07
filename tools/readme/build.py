@@ -585,6 +585,48 @@ def proyecto_casa():
                    "diseño y desarrollo del sitio en React")
 
 
+def proyecto_paneles():
+    vis = (pantalla(22, 126, 444, 154)
+           + f'<text x="38" y="150" class="mono" font-size="10.5" fill="{C["ink3"]}">numi · admin · /inicio</text>'
+           + "".join(marco(38 + k * 102, 162, 92, 40, "#1c1f25", C["line2"], 3, False)
+                     + f'<text x="{50 + k * 102}" y="190" class="px" font-size="20" fill="{C["ink"]}">{v}</text>'
+                     + f'<text x="{50 + k * 102}" y="176" class="mono" font-size="9" fill="{C["ink3"]}">{t}</text>'
+                     for k, (t, v) in enumerate([("sedes", "8"), ("docentes", "7"), ("grupos", "14"), ("niños", "210")]))
+           + "".join(r(38, 214 + k * 16, 300, 6, "#2a2e38", ' class="pix"')
+                     + r(38, 214 + k * 16, w, 6, C["cyan"], f' class="bar pix" style="animation-delay:{.3 + k * .15:.2f}s"')
+                     for k, w in enumerate([284, 128, 100, 56]))
+           + '<g class="rise" style="animation-delay:1s">' + marco(352, 210, 98, 58, "#4a5b93", "#6f86d9", 3, False)
+           + f'<text x="401" y="234" text-anchor="middle" class="mono" font-size="10" fill="{C["ink"]}">docente</text>'
+           + f'<text x="401" y="256" text-anchor="middle" class="px" font-size="20" fill="{C["ink"]}">58%</text></g>')
+    return tarjeta("EN DESARROLLO", C["cyan"], "equipo · parte de Numi", "Paneles de Numi",
+                   "Panel administrativo y docente conectados con la app", vis,
+                   "Python · Flask · MySQL · Bootstrap · pytest", "ver la ficha",
+                   "Paneles de Numi, en desarrollo, proyecto en equipo: panel administrativo y panel docente en Flask y MySQL, conectados con la app, con 110 pruebas. "
+                   "Mi rol: los dos paneles con Luis Miguel Muñoz, el servidor, la conexión con la app y las pruebas.",
+                   "los dos paneles: servidor, conexión y pruebas")
+
+
+def proyecto_grado():
+    estados = [("EN ELABORACIÓN", "#4a5b93"), ("EN REVISIÓN", C["amber"]), ("APROBADA", C["green"])]
+    vis = (pantalla(22, 126, 444, 154)
+           + f'<text x="38" y="150" class="mono" font-size="10.5" fill="{C["ink3"]}">historia clínica · flujo de revisión</text>')
+    for k, (t, c) in enumerate(estados):
+        x = 38 + k * 142
+        vis += ('<g class="rise" style="animation-delay:%.2fs">' % (.3 + k * .4)
+                + marco(x, 172, 128, 40, "#101217", c, 3, False)
+                + f'<text x="{x + 64}" y="197" text-anchor="middle" class="mono" font-size="10.5" fill="{c}">{t}</text></g>')
+        if k < 2:
+            vis += r(x + 130, 190, 10, 4, C["line2"], ' class="pix"')
+    vis += (f'<text x="38" y="240" class="sg" font-size="13" fill="{C["ink2"]}">17 requisitos · 9 casos de uso · Scrum en 2027</text>'
+            + f'<text x="38" y="262" class="mono" font-size="10.5" fill="{C["ink3"]}">400–500 historias por semestre, sin papel</text>')
+    return tarjeta("EN DOCUMENTACIÓN", "#3fb8a9", "proyecto de grado · equipo", "Proyecto de grado",
+                   "Historias clínicas digitales para el Técnico en Salud Oral", vis,
+                   "Requisitos · Casos de uso · Modelo E-R · Scrum", "ver la ficha",
+                   "Proyecto de grado, en documentación, en equipo: aplicativo web para registrar y aprobar historias clínicas del Técnico Auxiliar en Salud Oral de la UCC. "
+                   "Mi rol: coautor del anteproyecto y representante del equipo en las actas.",
+                   "coautor del anteproyecto y de los requisitos")
+
+
 # ======================================================================
 # 5. Inventario (stack) e insignias
 # ======================================================================
@@ -771,6 +813,7 @@ def main():
         "chip-arduino.svg": chip("Arduino · RFID", "codigo"),
         "chip-blackjack.svg": chip("BlackJack", "codigo"),
         "chip-datos.svg": chip("Datos con Python", "codigo"),
+        "chip-paneles.svg": chip("Paneles de Numi", "codigo"),
         "chip-portafolio.svg": chip("Capturas, video y mi rol en el portafolio", "enlace"),
         "chip-cred-balancing.svg": chip("Cloud Load Balancing", "credencial"),
         "chip-cred-appdev.svg": chip("App Dev Environment", "credencial"),
@@ -781,6 +824,8 @@ def main():
         "proyecto-cinex.svg": proyecto_cinex(),
         "proyecto-numi.svg": proyecto_numi(),
         "proyecto-casa-rendon.svg": proyecto_casa(),
+        "proyecto-paneles.svg": proyecto_paneles(),
+        "proyecto-grado.svg": proyecto_grado(),
         "stack.svg": stack(),
         "en-linea.svg": en_linea(),
         "cierre.svg": cierre(),
